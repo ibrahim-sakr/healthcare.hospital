@@ -1,0 +1,33 @@
+#diets-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label(for="dietName") Name
+				.form-input
+					input#dietName(type="text", name="dietName", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label Added ON
+				.form-input
+					input#from(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input#to(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-element
+				label(for="dietText") Details
+				.form-input
+					textarea#dietText(name="dietText", class="#{errors && 'details' in errors ? 'err' : ''}") #{inputs ? inputs.details : data.details}
+					if errors
+						if 'details' in errors
+							.valid_err: ul
+								for err in errors.details
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="diets-update", data-id="#{data.id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="diets-remove", data-id="#{data.id}") delete

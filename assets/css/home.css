@@ -1,0 +1,93 @@
+#home-page > h1 {
+	font-family: "OpenSansSemiBold";
+}
+#home-page .widget {
+	background: #fff;
+	margin: 0 4% 4% 0;
+	float: left;
+	width: 48%;
+	border: 1px solid #eee;
+}
+#home-page .widget:nth-child(odd) {
+	margin-right: 0;
+}
+#home-page .widget .title {
+	font-family: "OpenSansLight";
+	font-size: 0.9em;
+	padding: 10px 15px;
+	border-bottom: 1px solid #eee;
+	font-weight: bold;
+	color: #333;
+}
+#home-page .widget .title i {
+	float: right;
+	cursor: pointer;
+	display: block;
+	margin: -10px -15px -10px 0;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+	line-height: 35px;
+	font-size: 1.4em;
+}
+#home-page .widget .title i:hover,
+#home-page .widget .title i:active {
+	background: #eee;
+}
+#home-page .widget .body {
+	padding: 15px;
+	font-size: 0.8em;
+	line-height: 1.3em;
+}
+#home-page .watch {}
+#home-page .clock {
+	background: #333333;
+	padding: 15px;
+	border-radius: 5px;
+}
+#home-page .clock > span {
+	display: block;
+	float: left;
+	text-align: center;
+}
+#home-page .clock > span:first-child {
+	padding: 5px 10px 0 0;
+	width: 20%;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+#home-page .clock > span:last-child {
+	background: #fff;
+	width: 80%;
+	text-align: center;
+	font-size: 1.8em;
+	font-weight: bold;
+	padding: 15px;
+	letter-spacing: 3px;
+	color: #333333;
+}
+#home-page .clock > span.hour {}
+#home-page .clock > span.minute {}
+#home-page .clock > span.second {}
+
+
+
+
+
+
+
+
+#home-page .widget.statistics {}
+#home-page .widget.patients {}
+#home-page .widget.booking {}
+
+
+
+
+
+
+
+
+
+

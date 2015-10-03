@@ -1,0 +1,651 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"width",
+				"width100"
+			],
+			[
+				"p",
+				"pointer"
+			],
+			[
+				"cu",
+				"cur	cursor: ${pointer};"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"product",
+				"product_sizes"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"in",
+				"in_array"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"is",
+				"is_array"
+			],
+			[
+				"volly_",
+				"volly_sizes_content"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"machines",
+				"machines-profile"
+			],
+			[
+				"border-bo",
+				"border-bottom-color"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"on",
+				"onchange	Attr"
+			],
+			[
+				"boo",
+				"bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"box",
+				"box-content"
+			],
+			[
+				"calendar",
+				"calendar-view"
+			],
+			[
+				"index",
+				"_.indexOf"
+			],
+			[
+				"passw",
+				"password"
+			],
+			[
+				"validate",
+				"validate-class"
+			],
+			[
+				"ppl",
+				"process.platform"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/nodeWebKit.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"dev",
+				"DevDocs: Search From Input"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"de",
+				"DevDocs: Search From Input"
+			],
+			[
+				"syntax pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"syntax json",
+				"Set Syntax: JSON"
+			],
+			[
+				"syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"synta html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"syntax ",
+				"Set Syntax: Jade"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 371.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules"
+	],
+	"file_history":
+	[
+		"/home/ibrahim/Downloads/git-2.4.6/INSTALL",
+		"/home/ibrahim/Downloads/git-2.4.6/command-list.txt",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/UserController.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/nwjs_healthcare.sql",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/Users.js",
+		"/home/ibrahim/work/node-webkit/nwjsWebSqlDatabase/assets/views/index.html",
+		"/home/ibrahim/work/node-webkit/webSqlDatabase/assets/views/index.html",
+		"/home/ibrahim/.config/menus/applications-merged/user-chrome-apps.menu",
+		"/home/ibrahim/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu",
+		"/home/ibrahim/work/node-webkit/nwjsWebSqlDatabase/package.json",
+		"/home/ibrahim/.config/web-sql-database/databases/file__0/1",
+		"/home/ibrahim/.config/chromium/Default/Session Storage/MANIFEST-000002",
+		"/home/ibrahim/.config/chromium/Default/databases/Databases.db-journal",
+		"/home/ibrahim/.config/chromium/Default/databases/Databases.db",
+		"/home/ibrahim/work/node-webkit/webSqlDatabase/package.json",
+		"/home/ibrahim/.cache/webkit/icondatabase/WebpageIcons.db",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/OptionController.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/BookingController.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/BedController.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/PatientController.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/assets/views/options/profile.jade",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/health_db.sql",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/assets/views/layout/login.jade",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/assets/js/main.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/PModule.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Layout.js",
+		"/home/ibrahim/work/node-webkit/enhancedHealthcareCenter/node_modules/Validate-alpha.js",
+		"/C/Users/hema/Desktop/membership-f4b907edab9b0f5dc0a5f0a38de4bedab8ec98e1/membership.git/web/app.php",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/js/main.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/BedController.js",
+		"/D/work/xampp/htdocs/Venatra/config/database.php",
+		"/C/Users/hema/AppData/Local/Temp/Rar$DIa0.526/example.css",
+		"/C/Users/hema/AppData/Local/Temp/Rar$DIa0.152/wp_browser_specific_css.php",
+		"/C/Users/hema/AppData/Local/Temp/Rar$DIa0.320/css_browser_selector.js",
+		"/M/web/wordpress/debug-plugin-activation-errors.php",
+		"/C/Users/hema/Desktop/shish/js/PIE.htc",
+		"/C/Users/hema/Desktop/shish/js/PIE.php",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/UserController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/Users.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/OptionController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/css/global.css",
+		"/C/Users/hema/AppData/Local/Temp/Rar$DIa0.901/package.json",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/options/add.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/PageController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/SessionController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/options/global.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/css/content.css",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/beds/profile.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/options/all.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/layout/intro.html",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/js/intro.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Routes.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/cost-items.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/cost-invoices.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/purchase-invoices.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/patients/all.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/PurchaseController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/beds/all.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/purchase-invoice.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/suppliers.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/supplier-invoice.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/GroupsInvoicesController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/CostController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/groups-invoices.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/cost-invoice.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/supplier-invoices.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/Controllers/StoreController.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/measurement-units.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/inventory-items.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/InventoryItems.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/MeasurementUnits.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/patients/add.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/Beds.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/layout/login.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/accounts/measurement-units.html",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/sidebars/account.jade",
+		"/C/Users/hema/Desktop/nw-sample-apps-master/nw-sample-apps-master/menus/script.js",
+		"/C/Users/hema/Desktop/favicon/favico-0.3.5.min.js",
+		"/C/Users/hema/Desktop/favicon/favico.js",
+		"/C/Users/hema/Desktop/nw-sample-apps-master/nw-sample-apps-master/file-explorer/package.json",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/sessions/add.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/PModule.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/css/header.css",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/layout/inside.jade",
+		"/C/Users/hema/Desktop/index.html",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/layout/master.html",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/css/home.css",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/css/calendar.css",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/calendar/newDate.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/calendar/datesTable.jade",
+		"/C/Users/hema/Desktop/favicon/bower_components/favico.js/favico.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/categories/categories.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/patients/profile.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/calendar/calendar.jade",
+		"/D/work/node-webkit/enhancedHealthcareCenter/node_modules/DB.Modules/Database.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/test.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/package.json",
+		"/D/work/node-webkit/enhancedHealthcareCenter/assets/views/pages/home.jade",
+		"/D/work/mansourApp/mansour5/www/index.html",
+		"/D/work/mansourApp/mansour5/www/js/app.js",
+		"/D/work/node-webkit/enhancedHealthcareCenter/pdf.dll",
+		"/D/work/xampp/htdocs/laravel5/resources/views/app.blade.php",
+		"/D/work/xampp/htdocs/laravel5/app/Http/routes.php",
+		"/D/work/xampp/htdocs/laravel5/storage/framework/compiled.php",
+		"/D/work/xampp/htdocs/laravel5/vendor/laravel/framework/src/Illuminate/Support/Facades/URL.php",
+		"/C/Users/hema/Desktop/wp_options.sql",
+		"/C/Users/hema/Desktop/wordpress-4.1.1/wordpress/wp-config.php",
+		"/C/Users/hema/Desktop/New Text Document.txt",
+		"/C/Users/hema/AppData/Roaming/FileZilla/recentservers.xml",
+		"/C/Program Files (x86)/FileZilla FTP Client/resources/defaultfilters.xml",
+		"/C/Program Files (x86)/FileZilla FTP Client/resources/theme.xml",
+		"/C/Users/hema/AppData/Local/Temp/fz3temp-1/database.php",
+		"/D/work/xampp/htdocs/laravel5/sftp-config.json",
+		"/C/Users/hema/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/work/xampp/htdocs/laravel5/app/Http/Controllers/OrphenController.php",
+		"/D/work/xampp/htdocs/laravel5/resources/views/profile.blade.php",
+		"/D/work/xampp/mysql/bin/my.ini",
+		"/d/work/xampp/mysql/data/mysql_error.log",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/work/xampp/mysql/my-default.ini",
+		"/D/work/xampp/mysql/data/auto.cnf",
+		"/D/work/xampp/phpMyAdmin/config.inc.php",
+		"/C/Users/hema/AppData/Local/healthcare-center-desktop-app/cookies",
+		"/C/Users/hema/AppData/Local/Silverlake Software LLC/Velocity/Docsets/Dash/WordPress.docset/Contents/Resources/Resources.db",
+		"/D/work/xampp/htdocs/laravel5/app/Http/Controllers/HomeController.php",
+		"/D/work/xampp/htdocs/laravel5/resources/views/search.blade.php",
+		"/D/work/xampp/htdocs/laravel5/resources/views/add.blade.php",
+		"/D/work/xampp/htdocs/laravel5/app/Models/Orphen.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"deleted",
+			"`deleted` int(1) NULL",
+			"users",
+			"luyao",
+			"synergies",
+			"luyao",
+			"synergies",
+			"luyao",
+			"synergies",
+			"websqldatabase",
+			"deleteBeds",
+			"deactivateBeds",
+			"options",
+			"sys_opt",
+			"edit",
+			"add",
+			"show",
+			"deleteSessions",
+			"edit",
+			"add",
+			"show",
+			"deleteCategories",
+			"edit",
+			"add",
+			"show",
+			"deleteMachines",
+			"edit",
+			"add",
+			"show",
+			"deleteGroups",
+			"edit",
+			"add",
+			"deleteEmployees",
+			"edit",
+			"add",
+			"show",
+			"deleteDiets",
+			"edit",
+			"add",
+			"show",
+			"deleteBooking",
+			"delete",
+			"edit",
+			"add",
+			"show",
+			"delete",
+			"add",
+			"permission",
+			"Adminstrator",
+			"`deleted`",
+			"phone",
+			"last_name",
+			"first_name",
+			"username",
+			"acc_costs",
+			"NOW()",
+			"updated_at",
+			"created_at",
+			"first_name",
+			"desc",
+			"res",
+			"thight_left",
+			"thight_right",
+			"obesity",
+			"thight_left",
+			"butocks",
+			"obesity",
+			"arm_right",
+			"butocks",
+			"latin1",
+			"root",
+			"Done",
+			"done",
+			"auth",
+			"\"",
+			"close",
+			"hideText",
+			"delete",
+			"openMiniminze",
+			"startupOpen",
+			"minimizeTray",
+			"openMiniminze",
+			"minimizeTray",
+			"openMiniminze",
+			"close",
+			"false",
+			"true",
+			"false",
+			"close",
+			"HCalert",
+			"store-inventory",
+			"editItem",
+			"cost",
+			"#{val.id}",
+			"Email",
+			"fax",
+			"Fax",
+			"phone",
+			"Phone",
+			"website",
+			"Website",
+			"name",
+			"Name",
+			"name",
+			"Name",
+			"unitName",
+			"editUnit",
+			"suppliers",
+			"Measurement",
+			"Beds",
+			"beds",
+			"Beds",
+			"options",
+			"data",
+			"Inventory",
+			"editItem",
+			"unitDesc",
+			"unitName",
+			"editUnit",
+			"description",
+			"unitName",
+			"groupId",
+			"newBed",
+			"true",
+			"GroupsInvoicesController",
+			"StoreController",
+			"Cost.",
+			"Purchase."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http://localhost"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 188.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 78.0
+	},
+	"pinned_build_system": "",
+	"project": "enhancedHealthCare.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fun",
+				"functions.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/work/node-webkit/filebrowser/filebrowser.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 288.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"UrlGenerator",
+				"UrlGenerator"
+			],
+			[
+				"URL",
+				"URL"
+			],
+			[
+				"AuthController ",
+				"AuthController"
+			],
+			[
+				"attempt",
+				"attempt"
+			],
+			[
+				"authenticate",
+				"authenticate"
+			],
+			[
+				"get_adjacent_post_link",
+				"get_adjacent_post_link"
+			],
+			[
+				"next_post_link",
+				"get_next_post_link"
+			],
+			[
+				"wp_list_comments",
+				"wp_list_comments"
+			],
+			[
+				"twentyfifteen_comment_nav",
+				"twentyfifteen_comment_nav"
+			]
+		],
+		"width": 848.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 261.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

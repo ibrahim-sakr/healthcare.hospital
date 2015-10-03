@@ -1,0 +1,434 @@
+.valid_err {
+	background: #FAEBE7 !important;
+	border: 1px solid #F9C3BA !important;
+	border-left-width: 8px !important;
+	padding: 7px !important;
+	margin: 0 0 15px 0 !important;
+	color: #D06D5C !important;
+	font-size: 0.8em !important;
+}
+.valid_err li {
+	line-height: 1.5em !important;
+	float: none !important;
+	width: 100% !important;
+}
+.err {
+	border: 1px solid #F9C3BA !important;
+}
+
+#inside-page {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #f5f5f5;
+}
+#main-content {
+	padding: 15px;
+	background: #fff;
+	position: fixed;
+	top: 85px;
+	left: 200px;
+	bottom: 0;
+	right: 0;
+	overflow-y: scroll
+}
+#home-page,
+#user-profile,
+#about-page,
+#license-page,
+#help-page,
+#options-page,
+#search-page {
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+}
+#main-structure h1 {
+	padding: 25px 25px;
+	margin: -15px -15px 20px -15px;
+	font-size: 1.1em;
+	border-bottom: 1px solid #e5e5e5;
+}
+#main-structure #profile-patients h1 {
+	margin: -15px 350px 20px -15px;
+}
+#main-structure h3 {
+	background-color: #333;
+	color: #fff;
+	padding: 15px 25px;
+	margin: 20px 0;
+}
+table {
+	width: 100%;
+	font-size: 0.8em;
+	background: #fff;
+}
+table th, table td { text-align: left; }
+table th {
+	border-bottom: 2px solid #ddd;
+	font-weight: bold;
+	color: #333;
+	padding: 15px;
+}
+table td {
+	border-bottom: 1px solid #ddd;
+	color: #444;
+	padding: 5px 13px;
+}
+table tfoot th {
+	border-top: 2px solid #ddd;
+	border-bottom: none;
+}
+table .action {
+	width: 113px;
+	max-width: 120px;
+	padding: 5px 5px;
+}
+
+/*
+ * Buttons
+ */
+.btn, .button {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	background-color: #999;
+	margin: 0 2px;
+}
+.button {
+	width: auto;
+	height: auto;
+	line-height: 1em;
+}
+.btn-big {
+	padding: 15px 25px;
+}
+.btn:hover, .btn:active, .button:hover, .button:active { background-color: #666; }
+.btn-primary { background-color: #4285f4; }
+.btn-primary:hover, .btn-primary:active { background-color: #1D5FCA; }
+.btn-danger { background-color: #d14836; }
+.btn-danger:hover, .btn-danger:active { background-color: #b0281a; }
+
+/*
+ * Form Elements
+ */
+form { width: 100%; }
+.form-element {
+	width: 100%;
+	margin: 0 0 15px 0;
+	position: relative;
+}
+.form-element > label {
+	display: block;
+	float: left;
+	width: 25%;
+}
+.form-element label {
+	line-height: 40px;
+	color: #444;
+}
+.form-element .form-input {
+	margin: 0 0 0 25%;
+}
+.form-element input[type=text],
+.form-element input[type=number],
+.form-element input[type=password],
+.form-element input[type=file],
+.form-element textarea,
+.form-element select {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	outline-color: #4285f4;
+}
+
+.form-element .checkbox input[type=checkbox],
+.form-element .radio input[type=radio] { display: none; }
+.form-element .checkbox label,
+.form-element .radio label {
+	position: relative;
+	padding: 0 0 0 25px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	height: 40px;
+}
+.form-element .checkbox label:before,
+.form-element .radio label:before {
+	content: " ";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	top: 10px;
+	border-radius: 4px;
+	background: #4285f4;
+}
+.form-element .radio label:before { border-radius: 50%; }
+
+.form-element .checkbox input[type=checkbox]:checked + label:before,
+.form-element .radio input[type=radio]:checked + label:before {
+	background-color: #fff;
+	box-shadow: inset 0px 0px 1px 5px #4285f4;
+}
+.form-action {
+	margin: 40px 0 0 0;
+}
+
+/*
+ * Tabs
+ */
+.tabs {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.tabs ul {}
+.tabs li {
+	float: left;
+	margin: 0 0 0 2px;
+	display: inline-block;
+	background-color: #fff;
+	text-align: center;
+	color: #333;
+	padding: 10px 5px;
+	font-size: 0.8em;
+	width: 69px;
+	height: 69px;
+	cursor: pointer;
+}
+.tabs .active {
+	background-color: #4285f4;
+	color: #fff;
+}
+.tabs i {
+	display: block;
+	font-size: 1.7em;
+	margin: 5px 0 10px 0;
+}
+.tabs-content > div:not(.form-action) {
+	display: none;
+}
+.tabs-content > div:first-child {
+	display: block;
+}
+
+/*
+ * Credit
+ */
+.money {
+	position: relative;
+	left: -15px;
+	margin: 0 202px 0 0;
+}
+.money .wcontainer:first-child .form-element {
+	margin: 0;
+}
+.money .button {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0 0 10px 0;
+}
+.money .item {
+	background: #e5e5e5;
+	padding: 10px;
+	margin: 0 0 5px 0;
+	color: #333;
+	font-size: 0.9em;
+}
+.money .item .icon-close {
+	background: #d5d5d5;
+	margin: -10px 5px -10px -10px;
+	height: 34px;
+	width: 34px;
+	text-align: center;
+	line-height: 36px;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ff0000;
+}
+.money .details-total {
+	background: #ccc;
+	padding: 10px;
+	font-size: 0.8em;
+}
+.money .details-total b {
+	float: right;
+}
+.total {
+	background: #e5e5e5;
+	position: fixed;
+	right: 7px;
+	bottom: 75px;
+	top: 174px;
+	width: 230px;
+	padding: 10px;
+}
+.total h4 {
+	font-weight: bold;
+	line-height: 33px;
+	margin: 0 0 9px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #aaa;
+}
+.total h4 button {
+	float: right;
+	padding: 10px 25px;
+}
+.total > div {
+	border-bottom: 1px solid #aaa;
+	padding: 10px;
+	font-size: 0.9em;
+}
+.total > div span {
+	float: right;
+}
+.total .t, .total .c {
+	border-bottom: none;
+	border-top: 2px solid #aaa;
+	background: #d5d5d5;
+	font-weight: bold;
+}
+.total .f {
+	margin: 10px 0 0 0;
+	padding: 15px 8px;
+	border-bottom: none;
+	border-top: 3px solid #aaa;
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+}
+
+.calendar-view {}
+.calendar-view button {
+	padding: 10px 18px;
+	margin: 12px 0px 0 5px;
+	background: #fff;
+	color: #333;
+}
+.calendar-view button:active,
+.calendar-view button:hover {
+	background: #ccc;
+}
+.calendar-view select {
+	padding: 0 0 0 5px;
+	margin: 12px 0 0 5px;
+	background: #fff;
+	color: #333;
+	border: none;
+	border-radius: 3px;
+	height: 33px;
+}
+
+/*
+ * Booking Profile
+ */
+#booking-profile #bookingActivate,
+#booking-profile .form-action label span { display: none }
+#booking-profile #bookingActivate + label .confirm { display: block; }
+#booking-profile #bookingActivate:checked + label { background: #4285f4; }
+#booking-profile #bookingActivate:checked + label .confirm { display: none; }
+#booking-profile #bookingActivate:checked + label .noconfirm { display: block; }
+
+/*
+ * Bed & Category Page
+ */
+.add-section {
+	margin: 0 0 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+.add-section .form-input {
+	margin: 0 85px 0 25%;
+}
+.add-section button {
+	position: absolute;
+	top: -1px;
+	right: 0;
+}
+.add-section a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 12px 25px;
+}
+
+
+/*
+ * options page
+ */
+#add-role .form-input li,
+#role-profile .form-input li {
+	width: 25%;
+	float: left;
+	padding: 0 15px 15px 0;
+}
+#add-role .form-input label,
+#role-profile .form-input label {
+	display: block;
+	width: 100%;
+	background: #f5f5f5;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 0.9em;
+	color: #333;
+	text-align: center;
+	line-height: 1.5em;
+	box-shadow: 1px 1px 1px rgba(0,0,0, 0.15);
+}
+#add-role .form-input input[type=checkbox],
+#role-profile .form-input input[type=checkbox] { display: none; }
+#add-role .form-input input[type=checkbox]:checked + label,
+#role-profile .form-input input[type=checkbox]:checked + label {
+	background: #4285f4;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Helper Classes
+ */
+.cash {
+	background: #777;
+	margin-left:-15px;
+	margin-right:-15px;
+	padding: 20px;
+	width: auto;
+}
+.cash > label {
+	color: #fff;
+}
+.text-center {
+	text-align: center;
+	padding: 20px 0;
+}
+.btn-additional {
+	width: 65px;
+}
+.noData {
+	padding: 15px 0;
+	text-align: center;
+	background: #FFE7E7;
+}

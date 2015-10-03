@@ -1,0 +1,50 @@
+#user-profile
+	h1: span #{user.title}
+	.container
+		form
+			h3 details
+			.form-element
+				label Role
+				.form-input
+					input#userRole(type="text" disabled="disabled", value="#{user.role}")
+			.form-element
+				label Name
+				.form-input
+					input#userName(type="text" disabled="disabled", value="#{user.name}")
+			.form-element
+				label(for="userFirstName") First Name
+				.form-input
+					input#userFirstName(type="text" name="userFirstName", value="#{'first_name' in inputs ? inputs.first_name : user.fname}")
+			.form-element
+				label(for="userLastName") Last Name
+				.form-input
+					input#userLastName(type="text" name="userLastName", value="#{'last_name' in inputs ? inputs.last_name : user.lname}")
+			.form-element
+				label(for="userPhone") Phone
+				.form-input
+					input#userPhone(type="text" name="userPhone", value="#{'phone' in inputs ? inputs.phone : user.phone}")
+			.form-element
+				label Added On
+				.form-input
+					input#userAddedOn(type="text" disabled="disabled", value="#{user.addon}")
+			.form-element
+				label Last Updated
+				.form-input
+					input#userUpdated(type="text" disabled="disabled", value="#{user.updon}")
+			hr
+			h3 change password
+			.form-element
+				label(for="userPass") Password
+				.form-input
+					input#userPass(type="password" name="userPass")
+			.form-element
+				label(for="userPassAgain") Password again
+				.form-input
+					input#userPassAgain(type="password" name="userPassAgain")
+			.form-action
+				a#update.button.btn-big.btn-primary(href="employee-update") Update
+				a#delete.button.btn-big.btn-danger.pull-right(href="employee-remove", data-id="#{user.id}") delete
+				if user.type
+					a#reactivate.button.btn-big.btn-primary.pull-right(href="employee-deactivate", data-id="#{user.id}", data-type="reactivate") Reactivate
+				else
+					a#deactivate.button.btn-big.pull-right(href="employee-deactivate", data-id="#{user.id}", data-type="archive") deactivate

@@ -1,0 +1,72 @@
+#add-user
+	h1: span Add New Employee
+	.container
+		form
+			.form-element
+				label(for="employeeFirstName") Employee First name
+				.form-input
+					input#employeeFirstName(type="text", name="employeeFirstName", value="#{inputs ? inputs.first_name : ''}", class="#{errors && 'first_name' in errors ? 'err' : ''}")
+					if errors
+						if 'first_name' in errors
+							.valid_err: ul
+								for err in errors.first_name
+									li #{err}
+			.form-element
+				label(for="employeeLastName") Employee last name
+				.form-input
+					input#employeeLastName(type="text", name="employeeLastName", value="#{inputs ? inputs.last_name : ''}", class="#{errors && 'last_name' in errors ? 'err' : ''}")
+					if errors
+						if 'last_name' in errors
+							.valid_err: ul
+								for err in errors.last_name
+									li #{err}
+			.form-element
+				label(for="employeeUsername") Employee username
+				.form-input
+					input#employeeUsername(type="text", name="employeeUsername", value="#{inputs ? inputs.username : ''}", class="#{errors && 'username' in errors ? 'err' : ''}")
+					if errors
+						if 'username' in errors
+							.valid_err: ul
+								for err in errors.username
+									li #{err}
+			.form-element
+				label(for="employeePhone") Employee Phone
+				.form-input
+					input#employeePhone(type="text", name="employeePhone", value="#{inputs ? inputs.phone : ''}", class="#{errors && 'phone' in errors ? 'err' : ''}")
+					if errors
+						if 'phone' in errors
+							.valid_err: ul
+								for err in errors.phone
+									li #{err}
+			.form-element
+				label(for="roleId") Role
+				.form-input
+					select#roleId(type="text", name="roleId")
+						each val in groups.rows
+							option(value="#{val.id}") #{val.name}
+					if errors
+						if 'role' in errors
+							.valid_err: ul
+								for err in errors.role
+									li #{err}
+			.form-element
+				label(for="employeePass") Password
+				.form-input
+					input#employeePass(type="password", name="employeePass", value="#{inputs ? inputs.password : ''}", class="#{errors && 'password' in errors ? 'err' : ''}")
+					if errors
+						if 'password' in errors
+							.valid_err: ul
+								for err in errors.password
+									li #{err}
+			.form-element
+				label(for="employeePassAgain") Password again
+				.form-input
+					input#employeePassAgain(type="password", name="employeePassAgain", value="#{inputs ? inputs.password_again : ''}", class="#{errors && 'password_again' in errors ? 'err' : ''}")
+					if errors
+						if 'password_again' in errors
+							.valid_err: ul
+								for err in errors.password_again
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="employee-add-post") Add Employee
+				button.button.btn-big.pull-right.btn-danger(type="reset") reset

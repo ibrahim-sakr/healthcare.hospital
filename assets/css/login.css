@@ -1,0 +1,95 @@
+.login-container {
+	background: #eee;
+	position: fixed;
+	top: 25px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+}
+.login-container .login {
+	width: 300px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	margin:auto;
+}
+.login-container .logo {
+	display: flex;
+	height: 150px;
+	background: #e8f0f2;
+	margin: 0 0 15px 0;
+}
+.login-container .logo img {
+	width: 120px;
+	margin: auto;
+}
+.login-container .welcome {
+	text-align: center;
+	font-size: 1.4em;
+	padding: 12px 0;
+	margin: 0 0 15px 0;
+	color: #3980BB;
+}
+.login-container .form {
+	margin: 0 0 20px 0;
+	padding: 0 20px;
+}
+.login-container .form label {
+	color: #6A7989;
+	font-weight: bold;
+	font-size: 0.9em;
+	margin: 0 0 5px 0;
+	display: block;
+}
+.login-container .form input {
+	width: 100%;
+	height: 40px;
+	margin: 0 0 15px 0;
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+.login-container #login-button {
+	display: block;
+	border: none;
+	background: #D89400;
+	width: 100%;
+	height: 50px;
+	border-radius: 4px;
+	color: #fff;
+	margin: 0 auto 10px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	line-height: 50px;
+}
+.login-container #login-button:hover {
+	background: #E79E00;
+}
+.login-container #login-button:active {
+	background: #C88A02;
+}
+.login-container .login > p {
+	width: 100%;
+	display: block;
+	font-size: 0.7em;
+	color: #555;
+	padding: 0 20px;
+}
+.login-container .login > p * {
+	display: block;
+	color: #555;
+}
+.login-container .login > p .remember-me {
+	float: left;
+	line-height: 18px;
+}
+.login-container .login > p .remember-me input {
+	float: left;
+}
+.login-container .login > p .forget-password {
+	float: right;
+	line-height: 18px;
+}

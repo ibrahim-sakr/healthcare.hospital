@@ -1,0 +1,29 @@
+#global-options
+	h1: span App Options
+	form
+		.form-element
+			label(for="ticketCash") ticket cash
+			.form-input
+				input#ticketCash(type="number", name="ticketCash")
+		.form-element
+			label(for="itemPerPage") items per page
+			.form-input
+				input#itemPerPage(type="number", name="itemPerPage")
+		.form-element
+			label startup with windows
+			.form-input.checkbox
+				input#startupOpen(type="checkbox", name="startupOpen")
+				label(for="startupOpen")
+		.form-element
+			label Open Minimized
+			.form-input.checkbox
+				input#openMiniminze(type="checkbox", name="openMiniminze")
+				label(for="openMiniminze")
+		.form-element
+			label Minimize to Tray
+			.form-input.checkbox
+				input#minimizeTray(type="checkbox", name="minimizeTray")
+				label(for="minimizeTray")
+
+		.form-action
+			a.button.btn-big.btn-primary.pull-right(href="#") Save

@@ -1,0 +1,97 @@
+#add-patients
+	h1: span Add Patient
+	.container
+		form
+			.form-element
+				label(for="groupId") Group
+				.form-input
+					select#groupId(name="groupId")
+						option(value="0") private
+						each val in groups
+							option(value="#{val.id}") #{val.name}
+			.form-element
+				label(for="patientName") patient Name
+				.form-input
+					input#patientName(type="text", name="patientName", class="#{errors && 'name' in errors ? 'err' : ''}", value="#{inputs ? inputs.name : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="patientAge") patient Age
+				.form-input
+					input#patientAge(type="text", name="patientAge", class="#{errors && 'age' in errors ? 'err' : ''}", value="#{inputs ? inputs.age : ''}")
+					if errors
+						if 'age' in errors
+							.valid_err: ul
+								for err in errors.age
+									li #{err}
+			.form-element
+				label(for="patientGender") Gender
+				.form-input
+					select#patientGender(name="patientGender")
+						option(value="male") Male
+						option(value="female") Female
+			.form-element
+				label(for="patientAddress") Address
+				.form-input
+					input#patientAddress(type="text", name="patientAddress", class="#{errors && 'address' in errors ? 'err' : ''}", value="#{inputs ? inputs.address : ''}")
+					if errors
+						if 'address' in errors
+							.valid_err: ul
+								for err in errors.address
+									li #{err}
+			.form-element
+				label(for="patientOccupation") Occupation
+				.form-input
+					input#patientOccupation(type="text", name="patientOccupation", value="#{inputs ? inputs.occupation : ''}")
+			.form-element
+				label(for="patientPhone") Telephone Number
+				.form-input
+					input#patientPhone(type="text", name="patientPhone", class="#{errors && 'phone' in errors ? 'err' : ''}", value="#{inputs ? inputs.phone : ''}")
+					if errors
+						if 'phone' in errors
+							.valid_err: ul
+								for err in errors.phone
+									li #{err}
+			.form-element
+				label(for="patientHabits") Habits
+				.form-input
+					input#patientHabits(type="text", name="patientHabits", value="#{inputs ? inputs.habits : ''}")
+			.form-element
+				label(for="patientTreatment") Onset of treatment
+				.form-input
+					input#patientTreatment(type="text", name="patientTreatment", value="#{inputs ? inputs.onset_of_treatment : ''}")
+			.form-element
+				label(for="patientOnset") Onset
+				.form-input
+					input#patientOnset(type="text", name="patientOnset", value="#{inputs ? inputs.onset : ''}")
+			.form-element
+				label(for="patientCourse") Course
+				.form-input
+					input#patientCourse(type="text", name="patientCourse", value="#{inputs ? inputs.course : ''}")
+			.form-element
+				label(for="patientDuration") Duration
+				.form-input
+					input#patientDuration(type="text", name="patientDuration", value="#{inputs ? inputs.duration : ''}")
+			.form-element
+				label(for="patientProblem") Main Problem
+				.form-input
+					input#patientProblem(type="text", name="patientProblem", value="#{inputs ? inputs.main_problem : ''}")
+			.form-element
+				label(for="patientHistory") Past History
+				.form-input
+					textarea#patientHistory(name="patientHistory", cols="30", rows="10") #{inputs ? inputs.past_history : ''}
+			.form-element
+				label(for="patientCash") Cash (200)
+				.form-input
+					input#patientCash(type="text", name="patientCash", class="#{errors && 'cash' in errors ? 'err' : ''}", value="#{inputs ? inputs.cash : ''}")
+					if errors
+						if 'cash' in errors
+							.valid_err: ul
+								for err in errors.cash
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="patients-add-post") Save
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

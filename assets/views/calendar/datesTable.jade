@@ -1,0 +1,30 @@
+table
+	thead
+		tr
+			th Patient
+			th Bed
+			th Session
+			th Start
+			th End
+			th.action action
+	tbody
+		if rows.length
+			each val in rows
+				tr(id="date-#{val.id}")
+					td #{val.Pname}
+					td #{val.Bname}
+					td #{val.Sname}
+					td #{val.date_from}
+					td #{val.date_to}
+					td.action
+						button.btn.btn-danger(type="button", title="delete date", onclick="Calendar.deleteDate(#{val.id});"): i.icon-close
+		else
+			tr: td.noData(colspan="6") there is no data right now
+	tfoot
+		tr
+			th Patient
+			th Bed
+			th Session
+			th Start
+			th End
+			th.action action

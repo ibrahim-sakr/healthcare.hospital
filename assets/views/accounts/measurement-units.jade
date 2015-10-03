@@ -1,0 +1,26 @@
+#measurement-units
+	h1: span Measurement Units
+	.container
+		.add-section
+			.form-element
+				label(for="editUnit") Select Unit to Edit
+				.form-input
+					select#editUnit(name="editUnit")
+						option(value="1") 1
+						option(value="2") 2
+						option(value="3") 3
+					a.button.btn-big.btn-primary(href="store-measurement") edit
+		h1 Add New Measurement Unit
+		form
+			.form-element
+				label(for="unitName") Unit Name
+				.form-input
+					input#unitName(type="text", name="unitName", class="#{errors && 'name' in errors ? 'err' : ''}", value="#{inputs ? inputs.name : ''}")
+			.form-element
+				label(for="unitDesc") Unit Description
+				.form-input
+					textarea#unitDesc(name="unitDesc", class="#{errors && 'description' in errors ? 'err' : ''}", value="#{inputs ? inputs.description : ''}")
+
+			.form-action
+				a.button.btn-big.btn-primary(href="store-measurement") Save
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

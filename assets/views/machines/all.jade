@@ -1,0 +1,26 @@
+#machines-all
+	h1: span All Machines
+	.container
+		table
+			thead: tr
+				th Name
+				th Added On
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.created_at}
+							td.action
+								a.btn.btn-primary(href="machines-profile", data-id="#{val.id}", title="edit Machine"): i.icon-edit
+								a.btn.btn-danger(href="machines-remove", data-id="#{val.id}", title="remove Machine"): i.icon-close
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot: tr
+				th Name
+				th Added On
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade

@@ -1,0 +1,165 @@
+#booking-profile
+	h1: span #{data.name}
+	.tabs
+		ul
+			li.active(data-target="details")
+				i.icon-details
+				| Detalis
+			li(data-target="dates")
+				i.icon-dates
+				| Calendar
+	.container.tabs-content
+		#details
+			form
+				h3 Booking Details
+				.form-element
+					label(for="bookingName") Name
+					.form-input
+						input#bookingName(type="text", name="bookingName", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+						if errors
+							if 'name' in errors
+								.valid_err: ul
+									for err in errors.name
+										li #{err}
+				.form-element
+					label(for="bookingAge") Age
+					.form-input
+						input#bookingAge(type="text", name="bookingAge", value="#{inputs ? inputs.age : data.age}", class="#{errors && 'age' in errors ? 'err' : ''}")
+						if errors
+							if 'age' in errors
+								.valid_err: ul
+									for err in errors.age
+										li #{err}
+				.form-element
+					label(for="bookingPhone") Phone
+					.form-input
+						input#bookingPhone(type="text", name="bookingPhone", value="#{inputs ? inputs.phone : data.phone}", class="#{errors && 'phone' in errors ? 'err' : ''}")
+						if errors
+							if 'phone' in errors
+								.valid_err: ul
+									for err in errors.phone
+										li #{err}
+				.form-element
+					label(for="bookingGender") Gender
+					.form-input
+						select#bookingGender(name="bookingGender")
+							option(value="male") male
+							option(value="female") female
+				.form-element
+					label(for="bookingProblem") Main Problem
+					.form-input
+						textarea#bookingProblem(name="bookingProblem", class="#{errors && 'main_problem' in errors ? 'err' : ''}") #{inputs ? inputs.main_problem : data.problem}
+						if errors
+							if 'main_problem' in errors
+								.valid_err: ul
+									for err in errors.main_problem
+										li #{err}
+				.form-element
+					label Added On
+					.form-input
+						input(type="text", value="#{data.created_at}", disabled="disabled")
+				.form-element
+					label Last Updated
+					.form-input
+						input(type="text", value="#{data.updated_at}", disabled="disabled")
+				h3 More Details
+				.form-element
+					label(for="bookingGroup") Group
+					.form-input
+						select#bookingGroup(name="bookingGroup")
+							option(value="0") private
+							each val in groups
+								option(value="#{val.id}") #{val.name}
+				.form-element
+					label(for="bookingAddress") Address
+					.form-input
+						input#bookingAddress(type="text", name="bookingAddress", value="#{inputs ? inputs.address : data.address}", class="#{errors && 'address' in errors ? 'err' : ''}")
+						if errors
+							if 'address' in errors
+								.valid_err: ul
+									for err in errors.address
+										li #{err}
+				.form-element
+					label(for="bookingOccupation") Occupation
+					.form-input
+						input#bookingOccupation(type="text", name="bookingOccupation", value="#{inputs ? inputs.occupation : data.occupation}", class="#{errors && 'occupation' in errors ? 'err' : ''}")
+						if errors
+							if 'occupation' in errors
+								.valid_err: ul
+									for err in errors.occupation
+										li #{err}
+				.form-element
+					label(for="bookingHabits") Habits
+					.form-input
+						input#bookingHabits(type="text", name="bookingHabits", value="#{inputs ? inputs.habits : data.habits}", class="#{errors && 'habits' in errors ? 'err' : ''}")
+						if errors
+							if 'habits' in errors
+								.valid_err: ul
+									for err in errors.habits
+										li #{err}
+				.form-element
+					label(for="bookingOnsetTreatment") Onset of treatment
+					.form-input
+						input#bookingOnsetTreatment(type="text", name="bookingOnsetTreatment", value="#{inputs ? inputs.onset_of_treatment : data.onset_treatment}", class="#{errors && 'onset_of_treatment' in errors ? 'err' : ''}")
+						if errors
+							if 'onset_of_treatment' in errors
+								.valid_err: ul
+									for err in errors.onset_of_treatment
+										li #{err}
+				.form-element
+					label(for="bookingOnset") Onset
+					.form-input
+						input#bookingOnset(type="text", name="bookingOnset", value="#{inputs ? inputs.onset : data.onset}", class="#{errors && 'onset' in errors ? 'err' : ''}")
+						if errors
+							if 'onset' in errors
+								.valid_err: ul
+									for err in errors.onset
+										li #{err}
+				.form-element
+					label(for="bookingCourse") Course
+					.form-input
+						input#bookingCourse(type="text", name="bookingCourse", value="#{inputs ? inputs.course : data.course}", class="#{errors && 'course' in errors ? 'err' : ''}")
+						if errors
+							if 'course' in errors
+								.valid_err: ul
+									for err in errors.course
+										li #{err}
+				.form-element
+					label(for="bookingDuration") Duration
+					.form-input
+						input#bookingDuration(type="text", name="bookingDuration", value="#{inputs ? inputs.duration : data.duration}", class="#{errors && 'duration' in errors ? 'err' : ''}")
+						if errors
+							if 'duration' in errors
+								.valid_err: ul
+									for err in errors.duration
+										li #{err}
+				.form-element
+					label(for="bookingPast") Past History
+					.form-input
+						input#bookingPast(type="text", name="bookingPast", value="#{inputs ? inputs.past_history : data.past}", class="#{errors && 'past_history' in errors ? 'err' : ''}")
+						if errors
+							if 'past_history' in errors
+								.valid_err: ul
+									for err in errors.past_history
+										li #{err}
+				.form-element
+					label(for="bookingCash") Cash
+					.form-input
+						input#bookingCash(type="text", name="bookingCash", value="#{inputs ? inputs.cash : ''}", class="#{errors && 'cash' in errors ? 'err' : ''}")
+						if errors
+							if 'cash' in errors
+								.valid_err: ul
+									for err in errors.cash
+										li #{err}
+				.form-action
+					if inputs && inputs.confirm
+						input#bookingActivate(type="checkbox", name="bookingActivate", checked="checked")
+					else
+						input#bookingActivate(type="checkbox", name="bookingActivate")
+					label.button.btn-big(for="bookingActivate")
+						span.confirm Confirm Booking
+						span.noconfirm Booking Confirmed
+					a.button.btn-big.btn-primary(href="booking-update", data-id="#{data.id}") Update
+					button.button.btn-big.pull-right.btn-danger(type="button") reset
+		#dates
+			include ../calendar/calendar.jade

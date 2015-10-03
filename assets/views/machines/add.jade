@@ -1,0 +1,52 @@
+#machines-add
+	h1: span Add New Machine
+	.container
+		form
+			.form-element
+				label(for="machineName") Machine Name
+				.form-input
+					input#machineName(type="text", name="machineName", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="machineRatio") share ratio
+				.form-input
+					input#machineRatio(type="text", name="machineRatio", value="#{inputs ? inputs.share_ratio : ''}", class="#{errors && 'share_ratio' in errors ? 'err' : ''}")
+					if errors
+						if 'share_ratio' in errors
+							.valid_err: ul
+								for err in errors.share_ratio
+									li #{err}
+			.form-element
+				label(for="machineSerial") serial Number
+				.form-input
+					input#machineSerial(type="text", name="machineSerial", value="#{inputs ? inputs.serial_number : ''}", class="#{errors && 'serial_number' in errors ? 'err' : ''}")
+					if errors
+						if 'serial_number' in errors
+							.valid_err: ul
+								for err in errors.serial_number
+									li #{err}
+			.form-element
+				label(for="machineCountry") Manufacturing country
+				.form-input
+					input#machineCountry(type="text", name="machineCountry", value="#{inputs ? inputs.manufacturing_country : ''}", class="#{errors && 'manufacturing_country' in errors ? 'err' : ''}")
+					if errors
+						if 'manufacturing_country' in errors
+							.valid_err: ul
+								for err in errors.manufacturing_country
+									li #{err}
+			.form-element
+				label(for="machinePrice") Purchasing price
+				.form-input
+					input#machinePrice(type="text", name="machinePrice", value="#{inputs ? inputs.purchasing_price : ''}", class="#{errors && 'purchasing_price' in errors ? 'err' : ''}")
+					if errors
+						if 'purchasing_price' in errors
+							.valid_err: ul
+								for err in errors.purchasing_price
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="machines-add-post") Add Machine
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

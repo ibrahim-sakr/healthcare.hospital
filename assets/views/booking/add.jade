@@ -1,0 +1,49 @@
+#booking-add
+	h1: span Add Booking
+	.container
+		form
+			.form-element
+				label(for="bookingName") Name
+				.form-input
+					input#bookingName(type="text", name="bookingName", class="#{errors && 'name' in errors ? 'err' : ''}", value="#{inputs ? inputs.name : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="bookingAge") Age
+				.form-input
+					input#bookingAge(type="text", name="bookingAge", class="#{errors && 'age' in errors ? 'err' : ''}", value="#{inputs ? inputs.age : ''}")
+					if errors
+						if 'age' in errors
+							.valid_err: ul
+								for err in errors.age
+									li #{err}
+			.form-element
+				label(for="bookingGender") Gender
+				.form-input
+					select#bookingGender(name="bookingGender")
+						option(value="male") male
+						option(value="female") female
+			.form-element
+				label(for="bookingPhone") Phone
+				.form-input
+					input#bookingPhone(type="text", name="bookingPhone", class="#{errors && 'phone' in errors ? 'err' : ''}", value="#{inputs ? inputs.phone : ''}")
+					if errors
+						if 'phone' in errors
+							.valid_err: ul
+								for err in errors.phone
+									li #{err}
+			.form-element
+				label(for="bookingProblem") Main Problem
+				.form-input
+					textarea#bookingProblem(name="bookingProblem", class="#{errors && 'main_problem' in errors ? 'err' : ''}") #{inputs ? inputs.main_problem : ''}
+					if errors
+						if 'main_problem' in errors
+							.valid_err: ul
+								for err in errors.main_problem
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="booking-add-post") Add Booking
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

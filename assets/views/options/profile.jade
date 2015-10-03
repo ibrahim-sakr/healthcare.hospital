@@ -1,0 +1,23 @@
+#role-profile
+	h1: span Role (#{role[0].name})
+	.container
+		form
+			.form-element
+				label(for="roleName") Name
+				.form-input
+					input#roleName(type="text", name="roleName", value="#{role[0].name}")
+			hr
+			.form-element
+				label Permissions
+				.form-input
+					ul
+						each val in all
+							li
+								if selected.indexOf(val.id) >= 0
+									input.permission(type="checkbox", value="#{val.id}", id="#{val.name}", checked="checked")
+								else
+									input.permission(type="checkbox", value="#{val.id}", id="#{val.name}")
+								label.perm(for="#{val.name}") #{val.display_name}
+			.form-action
+				a.button.btn-big.btn-primary(href="app-options-update", data-id="#{role[0].id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="app-options-remove", data-id="#{role[0].id}") delete

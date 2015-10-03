@@ -1,0 +1,25 @@
+#diets-add
+	h1: span Add New  Diet
+	.container
+		form
+			.form-element
+				label(for="dietName") Name
+				.form-input
+					input#dietName(type="text", name="dietName", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="dietText") Details
+				.form-input
+					textarea#dietText(name="dietText", class="#{errors && 'details' in errors ? 'err' : ''}") #{inputs ? inputs.details : ''}
+					if errors
+						if 'details' in errors
+							.valid_err: ul
+								for err in errors.details
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="diets-add-post") Add
+				button.button.btn-big.pull-right.btn-danger(type="reset") reset

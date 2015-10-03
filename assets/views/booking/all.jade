@@ -1,0 +1,26 @@
+#booking-all
+	h1: span All Booking
+	.container
+		table
+			thead: tr
+				th Name
+				th Code
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.code}
+							td
+								a(href="booking-profile", data-id="#{val.id}", title="edit Book", class="btn btn-primary"): i(class="icon-edit")
+								a(href="booking-remove", data-id="#{val.id}", title="delete Book", class="btn btn-danger"): i(class="icon-close")
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot: tr
+				th Name
+				th Code
+				th.action Action
+	if opt.links.pages > 1
+		include ../layout/pagination.jade

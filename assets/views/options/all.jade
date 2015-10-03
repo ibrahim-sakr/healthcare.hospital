@@ -1,0 +1,23 @@
+#roles-all
+	h1: span Roles
+	.container
+		table
+			thead: tr
+				th Name
+				th.action Action
+			tbody
+				if rows.length
+					each val in rows
+						tr
+							td #{val.name}
+							td.action
+								a.btn.btn-primary(href="app-options-profile", data-id="#{val.id}"): i.icon-edit
+								a.btn.btn-danger(href="app-options-remove", data-id="#{val.id}"): i.icon-close
+				else
+					tr
+						td.noData(colspan="2") there is no data right now
+			tfoot: tr
+				th Name
+				th.action Action
+		if links.pages > 1
+			include ../layout/pagination.jade

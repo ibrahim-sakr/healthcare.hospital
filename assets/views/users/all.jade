@@ -1,0 +1,30 @@
+#users-all
+	h1: span #{title}
+	.container
+		table
+			thead: tr
+				th Name
+				th Role
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.username}
+							td #{val.phone}
+							td.action
+								a.btn.btn-primary(href="employee-profile", data-id="#{val.id}", title="edit employee"): i.icon-edit
+								if type == "all"
+									a.btn(href="employee-deactivate", data-id="#{val.id}", data-type="archive", title="move employee to archive"): i.icon-archive
+								if type == "archive"
+									a.btn.btn-primary(href="employee-deactivate", data-id="#{val.id}", data-type="reactivate", title="restore employee"): i.icon-archive
+									a.btn.btn-danger(href="employee-remove", data-id="#{val.id}", title="delete employee from the system"): i.icon-close
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot: tr
+				th Name
+				th Role
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade

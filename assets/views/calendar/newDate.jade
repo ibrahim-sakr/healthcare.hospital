@@ -1,0 +1,25 @@
+.width100.form-element
+	label(for="Pname") Patient Name
+	input#Pname(type="text", value="#{patientName}", disabled="disabled")
+.width100
+	.width50.form-element
+		label(for="start") From
+		input#start(type="text", name="start")
+	.width50.form-element
+		label(for="end") To
+		input#end(type="text", name="end")
+.width100
+	.width50.form-element
+		label(for="Sname") Session
+		select#Sname(name="Sname")
+			each val in sessions
+				option(value="#{val.id}") #{val.name}
+	.width50.form-element
+		label(for="Bname") Session
+		select#Bname(name="Bname")
+			each val in beds
+				option(value="#{val.id}") #{val.name}
+.width100
+	button.button.btn-big.btn-primary(type="button", onclick="Calendar.addDate();") add
+	input#pid(type="hidden", 	value="#{pid}")
+	input#currDay(type="hidden",value="#{pid}")

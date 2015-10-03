@@ -1,0 +1,24 @@
+#diets-all
+	h1: span All Diets
+	.container
+		table
+			thead: tr
+				th Name
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td.action
+								a.btn.btn-primary(href="diets-profile", data-id="#{val.id}", title="edit Diet"): i.icon-edit
+								a.btn.btn-danger(href="diets-remove", data-id="#{val.id}", title="remove Diet"): i.icon-close
+				else
+					tr
+						td.noData(colspan="2") there is no data right now
+			tfoot: tr
+				th Name
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade
+

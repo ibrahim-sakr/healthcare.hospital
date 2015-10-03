@@ -1,0 +1,39 @@
+#cost-invoices
+	h1: span All Cost Invoices
+	.container
+		table
+			thead: tr
+				th invoice number
+				th Added On
+				th.action Action
+			tbody
+				tr
+					td invoice one
+					td invoice date
+					td
+						a(href="#", data-id="", title="edit invoice", class="btn btn-primary"): i.icon-edit
+						a(href="#", data-id="", title="delete invoice", class="btn btn-danger"): i.icon-close
+				tr
+					td invoice one
+					td invoice date
+					td
+						a(href="#", data-id="", title="edit invoice", class="btn btn-primary"): i.icon-edit
+						a(href="#", data-id="", title="delete invoice", class="btn btn-danger"): i.icon-close
+				tr
+					td invoice one
+					td invoice date
+					td
+						a(href="#", data-id="", title="edit invoice", class="btn btn-primary"): i.icon-edit
+						a(href="#", data-id="", title="delete invoice", class="btn btn-danger"): i.icon-close
+				tr
+					td invoice one
+					td invoice date
+					td
+						a(href="#", data-id="", title="edit invoice", class="btn btn-primary"): i.icon-edit
+						a(href="#", data-id="", title="delete invoice", class="btn btn-danger"): i.icon-close
+			tfoot: tr
+				th invoice number
+				th Added On
+				th.action Action
+		//- if opt.links.pages > 1
+		//- 	include ../layout/pagination.jade

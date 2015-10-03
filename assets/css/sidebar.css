@@ -1,0 +1,89 @@
+section#main-sidebar {
+	width: 200px;
+	position: fixed;
+	top: 85px;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	overflow-x: auto;
+	background: #eee;
+	border-right: 1px solid #ccc;
+	z-index: 1;
+}
+section#main-sidebar.sidebar-close {
+	left: -200px;
+}
+section#main-sidebar li label,
+section#main-sidebar li a {
+	display: block;
+	cursor: pointer;
+	color: #555;
+	font-size: 0.9em;
+	text-transform: lowercase;
+}
+section#main-sidebar li label:active,
+section#main-sidebar li a:active {
+	background: #ddd;
+	border-radius: 5px;
+}
+section#main-sidebar li input[type=checkbox] {
+	display: none;
+}
+section#main-sidebar li label:before,
+section#main-sidebar li a:before {
+	content: "\e608";
+	font-family: "icomoon";
+	margin: 0 5px 0 0;
+	color: #555;
+}
+section#main-sidebar li input[type=checkbox] + label {
+	color: #000;
+}
+section#main-sidebar li input[type=checkbox] + label:before {
+	content: "\e607";
+	font-family: "icomoon";
+	margin: 0 5px 0 0;
+	color: #EAA715;
+}
+section#main-sidebar li input[type=checkbox]:checked + label:before {
+	content: "\e608";
+	font-family: "icomoon";
+	margin: 0 5px 0 0;
+	color: #EAA715;
+}
+section#main-sidebar > ul ul {
+	display: none;
+}
+/* LEVEL ONE */
+section#main-sidebar > ul > li > input[type=checkbox]:checked ~ ul {
+	display: block;
+}
+/* LEVEL TWO */
+section#main-sidebar > ul > li > ul > li > input[type=checkbox]:checked ~ ul {
+	display: block;
+}
+
+
+section#main-sidebar > ul > li > a,
+section#main-sidebar > ul > li > label {
+	padding: 5px 0;
+}
+section#main-sidebar > ul > li > ul > li > a,
+section#main-sidebar > ul > li > ul > li > label {
+	margin: 0 0 1px 7px;
+	padding: 3px 0 3px 13px;
+	border-left: 1px dotted #ccc;
+}
+section#main-sidebar > ul > li > ul > li > ul > li {
+	margin: 0 0 1px 7px;
+	padding: 0 0 0 13px;
+	border-left: 1px dotted #ccc;
+}
+section#main-sidebar > ul > li > ul > li > ul > li > a,
+section#main-sidebar > ul > li > ul > li > ul > li > label {
+	margin: 0 0 1px 7px;
+	padding: 3px 0 3px 13px;
+	border-left: 1px dotted #ccc;
+}
+
+

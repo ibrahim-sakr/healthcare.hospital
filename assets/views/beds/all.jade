@@ -1,0 +1,37 @@
+#beds
+	h1: span Beds
+	.container
+		.add-section
+			.form-element
+				label(for="newBed") New Bed
+				.form-input
+					input#newBed(type="text", name="newBed", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+					a.button.btn-big.btn-primary(href="beds-add-post") add
+		table
+			thead: tr
+				th Name
+				th Added On
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.created_at}
+							td.action
+								a.btn.btn-primary(href="beds-profile", data-id="#{val.id}", title="edit Bed"): i.icon-edit
+								a.btn.btn-danger(href="beds-remove", data-id="#{val.id}", title="remove Bed"): i.icon-close
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot: tr
+				th Name
+				th Added On
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade

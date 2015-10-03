@@ -1,0 +1,29 @@
+div#all-patients
+	h1
+		span All Patients
+	div.container
+		table
+			thead
+				tr
+					th Name
+					th Code
+					th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.code}
+							td
+								a(href="patients-profile", data-id="#{val.id}", title="edit employee", class="btn btn-primary"): i(class="icon-edit")
+								a(href="patients-remove", data-id="#{val.id}", title="delete employee", class="btn btn-danger"): i(class="icon-close")
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot
+				tr
+					th Name
+					th Code
+					th.action Action
+	if opt.links.pages > 1
+		include ../layout/pagination.jade

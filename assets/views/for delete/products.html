@@ -1,0 +1,23 @@
+<h2>All Products</h2>
+
+<ul class="products-list"></ul>
+
+<script>
+	
+	var sqlQuery = "SELECT name, id FROM products";
+	db.query(sqlQuery, function(err, rows, fields) {
+		if (err) throw err;
+		jQuery.each(rows, function(index, value){
+			jQuery('ul.products-list').append("<li><a class='product' href='"+ value.id +"'>"+ value.name +"</a></li>");
+		});
+	});
+
+	jQuery(document).on('click', '.product', function(e){
+		e.preventDefault();
+		product_id = jQuery(this).attr('href');
+		jQuery('.container').load("../views/product.html");
+	});
+
+
+
+</script>

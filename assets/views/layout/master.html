@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HealthCare Center</title>
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+	<section id="close-bar">
+		<ul class="pull-left">
+			<li>HealthCare Center</li>
+			<li><a href="about-page">about</a></li>
+			<li><a href="license-page">license</a></li>
+			<!-- <li id="show" style="color: #fff;">show</li> -->
+		</ul>
+		<ul class="pull-right">
+			<li id="app-full-screen" title="Go to Full Screen" class="icon-fullscreen"></li>
+			<li id="app-minimize" title="Minimize window" class="icon-minimize"></li>
+			<li id="app-maximize" title="Maxmize window" class="icon-maxmize"></li>
+			<li id="app-exit" title="Close the App" class="icon-close"></li>
+		</ul>
+	</section><!-- end close-bar -->
+	<div id="main-structure"></div><!-- end main-structure -->
+	
+
+	<div id="module-messages"><!-- success, updated, error -->
+		<div class="message-container">
+			<div class="mhead"></div><!-- end mhead -->
+			<div class="mbody"></div><!-- end mbody -->
+			<div class="mfoot"></div><!-- end mfoot -->
+		</div><!-- end message-container -->
+	</div><!-- end messages -->
+
+	<div id="calPopup">
+		<div>
+			<div class="calPopupHeader">
+				<h4 id="calPopupTitle"></h4>
+				<i onclick="Calendar.hidePopup();" class="icon-close"></i>
+			</div><!-- end calPopupHeader -->
+			<ul class="calPopupContent">
+				<li class="calPopupTab">
+					<input type="radio" id="calPopupTab-1" name="calPopupTab" checked="checked">
+					<label for="calPopupTab-1">Dates</label>
+					<div id="datesTable"></div>
+				</li>
+				<li class="calPopupTab">
+					<input type="radio" id="calPopupTab-2" name="calPopupTab">
+					<label for="calPopupTab-2">new date</label>
+					<div id="newDate"></div>
+				</li>
+			</ul><!-- end calPopupContent -->
+		</div>
+	</div><!-- end calPopup -->
+
+	<script src="../../js/jquery-2.1.3.min.js"></script>
+	<script src="../../js/jquery-ui.min.js"></script>
+	<script src="../../js/jquery-ui-timepicker-addon.js"></script>
+	<script src="../../js/jquery.dataTables.min.js"></script>
+	<script src="../../js/tinymce/tinymce.min.js"></script>
+	<script src="../../js/main.js"></script>
+</body>
+</html>

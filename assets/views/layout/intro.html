@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intro</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			-webkit-user-select: none;
+		}
+		.body {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-width: 2px;
+			border-style: solid;
+			border-color: #e3e3e3 #686a69 #696969 #e3e3e3;
+			background: #fbfbfb;
+			padding: 15px;
+		}
+		.body:before {
+			content: "";
+			position: absolute;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #ffffff #a0a0a0 #a0a0a0 #ffffff;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.body:after {
+			content: "";
+			position: absolute;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #f0f0f0;
+			top: 1px;
+			left: 1px;
+			right: 1px;
+			bottom: 1px;
+		}
+		.top-header {
+			-webkit-app-region: drag;
+			margin: -15px -15px 0 -15px;
+			padding: 15px 15px 0 15px;
+		}
+		.top-header:before, .top-header:after { display: table; content: ""; }
+		.top-header:after { clear: both; }
+		.top-header span {
+			float: right;
+			display: block;
+			width: 33px;
+			height: 33px;
+			color: #828282;
+			text-align: center;
+			line-height: 33px;
+			-webkit-app-region: no-drag;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.top-header span:hover {
+			background: #e9e9e9;
+		}
+		.top-header .minimize {}
+		.top-header .close {}
+		.load {
+			width: 100%;
+			text-align: center;
+			font-size: 1.3em;
+			margin: 45px 0 40px 0;
+		}
+		.progressbar {}
+		.logo {
+			margin: 0;
+			text-align: center;
+			width: 100%;
+		}
+		.logo img {
+			height: 40px;
+			width: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<!-- <div class="top-header">
+			<span class="close">X</span>
+			<span class="minimize">_</span>
+		</div> -->
+		<p class="load">Loading application... Please wait</p>
+		<!-- <div class="progressbar"></div> -->
+		<h1 class="logo"><img src="../../images/logo-main.png" alt="logo"></3>
+	</div>
+	<script>
+		var gui = require('nw.gui');
+		old_win = gui.Window.get();
+		main_win = gui.Window.open('master.html', {
+			title: "Healthcare Center",
+			kiosk: false,
+			icon: "./assets/images/icon.png",
+			toolbar: false,
+			frame: false,
+			width: 950,
+			height: 747,
+			position: "center",
+			min_width: 100,
+			min_height: 300,
+			fullscreen: false,
+			show_in_taskbar: true,
+			show: false,
+			transparent: false,
+			resizable: true,
+			as_desktop: false
+		});
+		main_win.on('loaded', function(){
+			old_win.close();
+		});
+		old_win.on('close', function() {
+			old_win.hide(); // Pretend to be closed already
+			main_win.show();
+			main_win.focus();
+			main_win.requestAttention();
+			main_win.setBadgeLabel("Healthcare Center");
+			old_win.close(true);
+		});
+
+
+
+			// win = gui.Window.get();
+		// win.evalNWBin(null, 'assets/js/intro.bin');
+	</script>
+</body>
+</html>

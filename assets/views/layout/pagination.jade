@@ -1,0 +1,20 @@
+div#paging
+	p Page #{opt.links.page} of #{opt.links.pages} pages, displaying #{opt.links.start}-#{opt.links.end} of #{opt.links.total} results
+	div.paging-links
+		if opt.links.page > 1
+			a.exclude-url.paging-link(href="#k", title="First page", onclick="Pagination.firstLink('#{routeName}');"): i.icon-first-page
+			a.exclude-url.paging-link(href="#", title="Previous page", onclick="Pagination.prevLink('#{routeName}');"): i.icon-prev-page
+		else
+			span.paging-link.paging-disabled: i.icon-first-page
+			span.paging-link.paging-disabled: i.icon-prev-page
+		if opt.links.page < opt.links.pages
+			a.exclude-url.paging-link(href="#", title="Next page", onclick="Pagination.nextLink('#{routeName}');"): i.icon-next-page
+			a.exclude-url.paging-link(href="#", title="Last page", onclick="Pagination.lastLink('#{routeName}');"): i.icon-last-page
+		else
+			span.paging-link.paging-disabled: i.icon-next-page
+			span.paging-link.paging-disabled: i.icon-last-page
+
+
+
+
+

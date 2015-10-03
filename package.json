@@ -1,0 +1,49 @@
+{
+	"name": "healthcare-center-desktop-app",
+	"main": "./assets/views/layout/intro.html",
+	"description": "Healthcare Center Desktop App",
+	// "snapshot": "mytest.bin",
+	"version": "0.1.0",
+	"keywords": [
+		"health",
+		"care",
+		"center",
+		"hospital"
+	],
+	"window": {
+		"title": "Healthcare Center",
+		"kiosk": false,
+		"toolbar": false,
+		"frame": false,
+		"width": 400,
+		"height": 225,
+		"resizable": false,
+		"position": "center",
+		"always-on-top": false,
+		"fullscreen": false,
+		"show_in_taskbar": false,
+		"show": true,
+		"transparent": false,
+		"visible-on-all-workspaces": false,
+		"as_desktop": false
+	},
+	"webkit": {
+		"plugin": false,
+		"java": false,
+		"page-cache": false
+	},
+	"maintainers":[
+		{
+			"name": "Ibrahim Saqr",
+			"email": "ebrahimes@gmail.com",
+			"web": "http://www.example.com"
+		}
+	],
+	"bugs": "mailto:ebrahimes@gmail.com",
+	"licenses": [
+		{
+			"type": "GPLv2",
+			"url": "http://www.example.com/licenses/gpl.html"
+		}
+	]
+}

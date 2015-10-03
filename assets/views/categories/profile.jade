@@ -1,0 +1,24 @@
+#categories-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label(for="categoryName") Category Name
+				.form-input
+					input#categoryName(type="text", name="categoryName", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label Added ON
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-action
+				a.button.btn-big.btn-primary(href="categories-update", data-id="#{data.id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="categories-remove", data-id="#{data.id}") delete

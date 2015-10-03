@@ -1,0 +1,37 @@
+#categories
+	h1: span Categories
+	.container
+		.add-section
+			.form-element
+				label(for="groupName") New Category
+				.form-input
+					input#groupName(type="text", name="groupName", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+					a.button.btn-big.btn-primary(href="categories-add-post") add
+		table
+			thead: tr
+				th Name
+				th Added On
+				th.action Action
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.created_at}
+							td.action
+								a.btn.btn-primary(href="categories-profile", data-id="#{val.id}", title="edit Category"): i.icon-edit
+								a.btn.btn-danger(href="categories-remove", data-id="#{val.id}", title="remove Category"): i.icon-close
+				else
+					tr
+						td.noData(colspan="3") there is no data right now
+			tfoot: tr
+				th Name
+				th Added On
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade

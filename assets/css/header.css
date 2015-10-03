@@ -1,0 +1,295 @@
+section#close-bar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 25px;
+	background: #111;
+	padding: 0 0 0 10px;
+	-webkit-app-region: drag;
+}
+section#close-bar ul {
+	-webkit-app-region: no-drag;
+}
+section#close-bar li {
+	float: left;
+}
+section#close-bar ul:first-child {}
+section#close-bar ul:first-child li { line-height: 25px; }
+section#close-bar ul:first-child li:first-child {
+	color: #fff;
+	font-size: 0.9em;
+	font-family: "OpenSansSemiBold";
+	margin: 0 15px 0 0;
+}
+section#close-bar ul:first-child li:not(:first-child) a {
+	color: #999;
+	font-size: 0.7em;
+	margin: 0 10px 0 0;
+
+}
+section#close-bar ul:first-child li:not(:first-child) a:hover,
+section#close-bar ul:first-child li:not(:first-child) a:active {
+	color: #ccc;
+}
+section#close-bar ul:last-child li {
+	margin: 0 0 0 1px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 0.7em;
+}
+section#close-bar ul:last-child .icon-minimize:hover,
+section#close-bar ul:last-child .icon-minimize:active {
+	background: #26c83f;
+}
+section#close-bar ul:last-child .icon-maxmize:hover,
+section#close-bar ul:last-child .icon-maxmize:active {
+	background: #febd2d;
+}
+section#close-bar ul:last-child .icon-close:hover,
+section#close-bar ul:last-child .icon-close:active {
+	background: #fe5f57;
+}
+header#header {
+	background: #fff;
+	padding: 10px 20px;
+	position: fixed;
+	top: 25px;
+	width: 100%;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+header#header > i {
+	float: left;
+	display: block;
+	margin: -10px 15px -10px -20px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 1.7em;
+	cursor: pointer;
+}
+header#header .logo {
+	height: 40px;
+	float: left;
+}
+header#header .origins {
+	position: absolute;
+	left: 199px;
+	top: 0;
+	bottom: 0;
+}
+header#header .origins li {
+	float: left;
+}
+header#header .origins a {
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 60px;
+	border-right: 1px solid #ddd;
+	text-align: center;
+	line-height: 60px;
+	font-size: 1.5em;
+	color: #888;
+}
+header#header .origins a:hover,
+header#header .origins a.active {
+	color: #ffbd2d;
+	background: #eee;
+}
+header#header .origins a:active {
+	color: #EAA715;
+}
+header#header .origins li:first-child a {
+	border-left: 1px solid #ddd;
+}
+
+
+header#header .origins .popover {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.85);
+	border-radius: 5px;
+	bottom: -35px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Helvetica',sans-serif;
+	left: -25px;
+	padding: 0px 10px;
+	position: absolute;
+	width: 100px;
+	z-index: 10;
+	line-height: 30px;
+}
+header#header .origins .popover:before {
+	border-bottom: 7px solid rgba(0, 0, 0, 0.85);
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+	content: '';
+	display: block;
+	left: 50%;
+	margin-left: -7px;
+	position: absolute;
+	top: -7px;
+}
+header#header .origins a:hover .popover {
+	display: block;
+}
+
+
+header#header .user-meta {
+	float: right;
+}
+header#header .user-meta > li {
+	float: left;
+	position: relative;
+	height: 40px;
+}
+header#header .user-meta > li:first-child {
+	margin: 0;
+}
+header#header .user-meta > li > a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1.1em;
+	color: #999;
+}
+header#header .user-meta > li > a:hover,
+header#header .user-meta > li > a:active {
+	background: #eee;
+	border-radius: 4px;
+}
+header#header #search {
+	position: absolute;
+	top: 10px;
+	left: 465px;
+	right: 150px;
+	bottom: 10px;
+}
+header#header #search .search-submit {
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	border: 0;
+	outline: none;
+	background: #eee;
+	color: #999;
+	border-radius: 0 4px 4px 0;
+	font-size: 1.3em;
+	float: right;
+	cursor: pointer;
+}
+header#header #search .search-select {
+	float: right;
+	background: #eee;
+	border: none;
+	height: 40px;
+	outline: none;
+	color: #999;
+	padding: 0 0 0 7px;
+}
+header#header #search .search-submit:hover,
+header#header #search .search-submit:active,
+header#header #search .search-select:hover,
+header#header #search .search-select:active {
+	background: #ddd;
+}
+header#header #search .search-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 132px;
+	height: 40px;
+}
+header#header #search .search-input input {
+	width: 100%;
+	outline: none;
+	border: none;
+	background: #eee;
+	border-radius: 4px 0 0 4px;
+	padding: 0 10px;
+	color: #777;
+	height: 40px;
+}
+header#header #search .search-input ::-webkit-input-placeholder {
+	color: #bbb;
+}
+header#header .user-meta label {
+	display: block;
+	cursor: pointer;
+	padding: 5px 10px;
+	margin: -5px -5px 0 0;
+}
+header#header .user-meta label img {
+	height: 30px;
+	border-radius: 4px;
+	float: left;
+	margin: 5px 5px 0 0;
+}
+header#header .user-meta label span {
+	color: #999;
+	line-height: 40px;
+	font-size: 0.8em;
+}
+header#header .user-meta .user-meta-menu,
+header#header .user-meta input[type="checkbox"] {
+	display: none;
+}
+header#header .user-meta .user-meta-menu {
+	background: #fff;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 140px;
+	border: 1px solid #ddd;
+	border-bottom: none;
+}
+header#header .user-meta .user-meta-menu li:first-child {
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -14px;
+	right: 11px;
+	border-color: transparent transparent #ddd transparent;
+	border-style: solid;
+	border-width: 7px;
+}
+header#header .user-meta .user-meta-menu a {
+	display: block;
+	padding: 12px 15px;
+	color: #333;
+	border-bottom: 1px solid #ddd;
+	font-size: 0.8em;
+}
+header#header .user-meta .user-meta-menu a:hover,
+header#header .user-meta .user-meta-menu a:active {
+	background: #f2f2f2;
+}
+header#header .user-meta .user-meta-menu a i {
+	margin: 0 5px 0 0;
+}
+header#header .user-meta input[type="checkbox"]:checked ~ label {
+	background: #eee;
+	border-radius: 4px;
+}
+header#header .user-meta input[type="checkbox"]:checked ~ .user-meta-menu {
+	display: block;
+}
+
+
+
+
+
+
+
+
+

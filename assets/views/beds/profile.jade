@@ -1,0 +1,28 @@
+#beds-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label(for="newBed") bed Name
+				.form-input
+					input#newBed(type="text", name="newBed", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label Added ON
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-action
+				a.button.btn-big.btn-primary(href="beds-update", data-id="#{data.id}") Update
+				if data.active > 0
+					a.button.btn-big.btn-danger(href="beds-deactivate", data-id="#{data.id}") Deactivate
+				else
+					a.button.btn-big(href="beds-reactivate", data-id="#{data.id}") Reactivate
+				a.button.btn-big.btn-danger.pull-right(href="beds-remove", data-id="#{data.id}") delete

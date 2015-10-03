@@ -1,0 +1,21 @@
+div.login-container
+	div#login-form.login
+		div.logo
+			img(src="../../images/logo-main.png", alt="logo")
+		div.welcome Please Login First
+		div.form
+			label(for="username") Username
+			input#username(type="text", value="#{inputs ? inputs.username : 'root'}", class="#{errors && 'username' in errors ? 'err' : ''}")
+			if errors
+				if 'username' in errors
+					.valid_err: ul
+						for err in errors.username
+							li #{err}
+			label(for="password") Password
+			input#password(type="password", class="#{errors && 'password' in errors ? 'err' : ''}", value="root")
+			if errors
+				if 'password' in errors
+					.valid_err: ul
+						for err in errors.password
+							li #{err}
+			a#login-button(href="app-post-login") login

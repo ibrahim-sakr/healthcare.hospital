@@ -1,0 +1,30 @@
+#sessions-add
+	h1: span Add New Session
+	.container
+		form
+			.form-element
+				label(for="categoryId") Session category
+				.form-input
+					select#categoryId(name="categoryId")
+						each cat in cats
+							option(value="#{cat.id}") #{cat.name}
+			.form-element
+				label(for="sessionName") Session Name
+				.form-input
+					input#sessionName(type="text", name="sessionName", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="sessionPrice") Session Price
+				.form-input
+					input#sessionPrice(type="text", name="sessionPrice")
+			.form-element
+				label(for="machinesIds") Machines
+				.form-input
+					input#machinesIds(type="text", name="machinesIds", multiple="multiple")
+			.form-action
+				a.button.btn-big.btn-primary(href="sessions-add-post") Ass Session
+				button.button.btn-big.btn-danger.pull-right(type="button") reset

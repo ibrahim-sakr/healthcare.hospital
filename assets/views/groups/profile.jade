@@ -1,0 +1,43 @@
+#group-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label(for="groupName") Group Name
+				.form-input
+					input#groupName(type="text", name="groupName", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="groupDiscount") Discount
+				.form-input
+					input#groupDiscount(type="text", name="groupDiscount", value="#{inputs ? inputs.discount : data.discount}", class="#{errors && 'discount' in errors ? 'err' : ''}")
+					if errors
+						if 'discount' in errors
+							.valid_err: ul
+								for err in errors.discount
+									li #{err}
+			.form-element
+				label(for="groupFixed") Fixed Price
+				.form-input
+					input#groupFixed(type="text", name="groupFixed", value="#{inputs ? inputs.fixed_price : data.fixed}", class="#{errors && 'fixed_price' in errors ? 'err' : ''}")
+					small <b>Important :</b> Leave this field empty unless you want Fixed price.
+					if errors
+						if 'fixed_price' in errors
+							.valid_err: ul
+								for err in errors.fixed_price
+									li #{err}
+			.form-element
+				label Added ON
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-action
+				a.button.btn-big.btn-primary(href="groups-update", data-id="#{data.id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="groups-remove", data-id="#{data.id}") delete

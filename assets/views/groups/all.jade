@@ -1,0 +1,30 @@
+#groups-all
+	h1: sapn All Groups
+	.container
+		table
+			thead: tr
+				th Name
+				th Discount
+				th Added On
+				th.action Action
+
+			tbody
+				if opt.rows.length
+					each val in opt.rows
+						tr
+							td #{val.name}
+							td #{val.discount} %
+							td #{val.created_at}
+							td.action
+								a.btn.btn-primary(href="groups-profile", data-id="#{val.id}", title="edit Group"): i.icon-edit
+								a.btn.btn-danger(href="groups-remove", data-id="#{val.id}", title="remove Group"): i.icon-close
+				else
+					tr
+						td.noData(colspan="4") there is no data right now
+			tfoot: tr
+				th Name
+				th Discount
+				th Added On
+				th.action Action
+		if opt.links.pages > 1
+			include ../layout/pagination.jade

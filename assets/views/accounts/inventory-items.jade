@@ -1,0 +1,33 @@
+#inventory-items
+	h1: span Inventory Items
+	.container
+		.add-section
+			.form-element
+				label(for="editItem") Select Item to Edit
+				.form-input
+					select#editItem(name="editItem")
+						option(value="1") 1
+						option(value="2") 2
+						option(value="3") 3
+					a.button.btn-big.btn-primary(href="store-inventory") edit
+		h1 Add New Inventory Item
+		form
+			.form-element
+				label(for="itemName") Item Name
+				.form-input
+					input#itemName(type="text", name="itemName", class="#{errors && 'name' in errors ? 'err' : ''}", value="#{inputs ? inputs.name : ''}")
+			.form-element
+				label(for="unitId") measurement unit
+				.form-input
+					select#unitId(name="unitId")
+						option(value="1") 1
+						option(value="2") 2
+						option(value="3") 3
+			.form-element
+				label(for="itemDesc") Item Description
+				.form-input
+					textarea#itemDesc(name="itemDesc", class="#{errors && 'description' in errors ? 'err' : ''}", value="#{inputs ? inputs.description : ''}")
+
+			.form-action
+				a.button.btn-big.btn-primary(href="store-inventory") Save
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

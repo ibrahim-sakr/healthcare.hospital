@@ -1,0 +1,37 @@
+#suppliers
+	h1: span Suppliers
+	.container
+		.add-section
+			.form-element
+				label(for="editSupplier") Select Supplier to Edit
+				.form-input
+					select#editSupplier(name="editSupplier")
+						option(value="1") 1
+						option(value="2") 2
+						option(value="3") 3
+					a.button.btn-big.btn-primary(href="purchasing-suppliers") edit
+		h1 Add New Supplier
+		form
+			.form-element
+				label(for="supplierName") Name
+				.form-input
+					input#supplierName(type="text", name="supplierName", class="#{errors && 'name' in errors ? 'err' : ''}", value="#{inputs ? inputs.name : ''}")
+			.form-element
+				label(for="supplierWebsite") Website
+				.form-input
+					input#supplierWebsite(type="text", name="supplierWebsite", class="#{errors && 'website' in errors ? 'err' : ''}", value="#{inputs ? inputs.website : ''}")
+			.form-element
+				label(for="supplierPhone") Phone
+				.form-input
+					input#supplierPhone(type="text", name="supplierPhone", class="#{errors && 'phone' in errors ? 'err' : ''}", value="#{inputs ? inputs.phone : ''}")
+			.form-element
+				label(for="supplierFax") Fax
+				.form-input
+					input#supplierFax(type="text", name="supplierFax", class="#{errors && 'fax' in errors ? 'err' : ''}", value="#{inputs ? inputs.fax : ''}")
+			.form-element
+				label(for="supplierEmail") Email
+				.form-input
+					input#supplierEmail(type="text", name="supplierEmail", class="#{errors && 'email' in errors ? 'err' : ''}", value="#{inputs ? inputs.email : ''}")
+			.form-action
+				a.button.btn-big.btn-primary(href="purchasing-suppliers") Save
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset

@@ -1,0 +1,55 @@
+#machines-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label(for="machineName") Machine Name
+				.form-input
+					input#machineName(type="text", name="machineName", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="machineRatio") share ratio
+				.form-input
+					input#machineRatio(type="text", name="machineRatio", value="#{inputs ? inputs.share_ratio : data.share_ratio}", class="#{errors && 'share_ratio' in errors ? 'err' : ''}")
+					if errors
+						if 'share_ratio' in errors
+							.valid_err: ul
+								for err in errors.share_ratio
+									li #{err}
+			.form-element
+				label(for="machineSerial") serial Num
+				.form-input
+					input#machineSerial(type="text", name="machineSerial", value="#{inputs ? inputs.serial_number : data.serial}")
+			.form-element
+				label(for="machineCountry") Manufacturing country
+				.form-input
+					input#machineCountry(type="text", name="machineCountry", value="#{inputs ? inputs.manufacturing_country : data.country}", class="#{errors && 'manufacturing_country' in errors ? 'err' : ''}")
+					if errors
+						if 'manufacturing_country' in errors
+							.valid_err: ul
+								for err in errors.manufacturing_country
+									li #{err}
+			.form-element
+				label(for="machinePrice") Purchasing price
+				.form-input
+					input#machinePrice(type="text", name="machinePrice", value="#{inputs ? inputs.purchasing_price : data.price}", class="#{errors && 'purchasing_price' in errors ? 'err' : ''}")
+					if errors
+						if 'purchasing_price' in errors
+							.valid_err: ul
+								for err in errors.purchasing_price
+									li #{err}
+			.form-element
+				label Added On
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-action
+				a.button.btn-big.btn-primary(href="machines-update", data-id="#{data.id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="machines-remove", data-id="#{data.id}") delete

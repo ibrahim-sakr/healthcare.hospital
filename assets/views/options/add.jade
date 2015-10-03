@@ -1,0 +1,32 @@
+#add-role
+	h1: span Add New Role
+	.container
+		form
+			.form-element
+				label(for="roleName") Role name
+				.form-input
+					input#roleName(type="text", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label Permissions
+				.form-input
+					ul.clearfix
+						each val in data.rows
+							li
+								if inputs && inputs.perm.indexOf("5") >= '0'
+									input.permission(type="checkbox", value="#{val.id}", id="#{val.name}", checked="checked")
+								else
+									input.permission(type="checkbox", value="#{val.id}", id="#{val.name}")
+								label.perm(for="#{val.name}") #{val.display_name}
+					if errors
+						if 'permissions' in errors
+							.valid_err: ul
+								for err in errors.permissions
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="app-options-add-role-post") Add Role
+				button.button.btn-big.pull-right.btn-danger(type="reset") reset

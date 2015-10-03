@@ -1,0 +1,665 @@
+#profile-patients
+	h1: span #{data.name}
+	.tabs
+		ul
+			li.active(data-target="details")
+				i.icon-details
+				| Detalis
+			li(data-target="diagnosis")
+				i.icon-diagnosis
+				| Diagnosis
+			li(data-target="credit")
+				i.icon-credit
+				| Credit
+			li(data-target="history")
+				i.icon-history
+				| History
+			li(data-target="dates")
+				i.icon-dates
+				| Calendar
+	.container.tabs-content
+		#details
+			h3 Patient Details
+			.form-element
+				label Group
+				.form-input
+					input(type="text" disabled="disabled", value="#{data.Gname}")
+			.form-element
+				label Code
+				.form-input
+					input(type="text" disabled="disabled", value="#{data.code}")
+			.form-element
+				label Name
+				.form-input
+					input(type="text" disabled="disabled", value="#{data.name}")
+			.form-element
+				label(for="patientAge") Age
+				.form-input
+					input#patientAge(type="text" name="patientAge", value="#{data.age}")
+			.form-element
+				label(for="patientGender") Gender
+				.form-input
+					select#patientGender(name="patientGender")
+						option(value="male") Male
+						option(value="female") Female
+			.form-element
+				label(for="patientPhone") Telephone Number
+				.form-input
+					input#patientPhone(type="text", name="patientPhone", value="#{data.phone}")
+			.form-element
+				label(for="patientAddress") Address
+				.form-input
+					input#patientAddress(type="text", name="patientAddress", value="#{data.address}")
+			.form-element
+				label(for="patientOccupation") Occupation
+				.form-input
+					input#patientOccupation(type="text", name="patientOccupation", value="#{data.occupation}")
+			.form-element
+				label(for="patientHabits") Habits
+				.form-input
+					input#patientHabits(type="text", name="patientHabits", value="#{data.habits}")
+			.form-element
+				label(for="patientTreatment") Onset of treatment
+				.form-input
+					input#patientTreatment(type="text", name="patientTreatment", value="#{data.onset_treatment}")
+			.form-element
+				label(for="patientProblem") Main Problem
+				.form-input
+					textarea#patientProblem(name="patientProblem", cols="30", rows="10") #{data.problem}
+			.form-element
+				label(for="patientHistory") Past History
+				.form-input
+					textarea#patientHistory(name="patientHistory", cols="30", rows="10") #{data.past}
+			.form-element
+				label(for="patientDiag") Diagnosis
+				.form-input
+					textarea#patientDiag(name="patientDiag", cols="30", rows="10") #{data.diag}
+			h3 Present History
+			.form-element
+				label(for="patientOnset") Onset
+				.form-input
+					input#patientOnset(type="text", name="patientOnset", value="#{data.onset}")
+			.form-element
+				label(for="patientCourse") Course
+				.form-input
+					input#patientCourse(type="text", name="patientCourse", value="#{data.course}")
+			.form-element
+				label(for="patientDuration") Duration
+				.form-input
+					input#patientDuration(type="text", name="patientDuration", value="#{data.duration}")
+		#diagnosis
+			h3 Obesity
+			table#obesity.display(cellspacing="0", width="100%")
+				thead
+					tr
+						th
+						th date
+						th weight
+						th body fat analysis
+						th B.F
+						th water
+						th muscle
+						th bone
+				tbody
+					each val, index in obesity
+						tr
+							td #{index + 1} st
+							td #{val.date}
+							td #{val.weight}
+							td #{val.body_fat}
+							td #{val.b_f}
+							td #{val.water}
+							td #{val.muscle}
+							td #{val.bone}
+					tr
+						td New Row
+						td #{date}
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th
+						th date
+						th weight
+						th body fat analysis
+						th B.F
+						th water
+						th muscle
+						th bone
+			h3 Abdomen
+			table
+				thead
+					tr
+						th(colspan="2") Left Thigh
+						th level of umblicus
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th total diference in session
+				tbody
+					each val, index in abdomen
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.level_1}
+							td #{val.below_5_1}
+							td #{val.below_10_1}
+							td #{val.below_15_1}
+							td #{val.above_5_1}
+							td #{val.above_10_1}
+							td #{val.above_15_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.level_2}
+							td #{val.below_5_2}
+							td #{val.below_10_2}
+							td #{val.below_15_2}
+							td #{val.above_5_2}
+							td #{val.above_10_2}
+							td #{val.above_15_2}
+							td #{val.total_2}
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Left Thigh
+						th level of umblicus
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th total diference in session
+			h3 Butocks
+			table
+				thead
+					tr
+						th(colspan="2") Left Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th total diference in session
+				tbody
+					each val, index in butocks
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.below_a_1}
+							td #{val.below_5_1}
+							td #{val.below_10_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.below_a_2}
+							td #{val.below_5_2}
+							td #{val.below_10_2}
+							td #{val.total_2}
+							
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Left Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th total diference in session
+			h3 Thights
+			table
+				thead
+					tr
+						th(colspan="2") Right Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th below 20 cm
+						th total diference in session
+				tbody
+					each val, index in thight_right
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.below_a_1}
+							td #{val.below_5_1}
+							td #{val.below_10_1}
+							td #{val.below_15_1}
+							td #{val.below_20_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.below_a_2}
+							td #{val.below_5_2}
+							td #{val.below_10_2}
+							td #{val.below_15_2}
+							td #{val.below_20_2}
+							td #{val.total_2}
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Right Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th below 20 cm
+						th total diference in session
+			hr
+			table
+				thead
+					tr
+						th(colspan="2") Left Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th below 20 cm
+						th total diference in session
+				tbody
+					each val, index in thight_left
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.below_a_1}
+							td #{val.below_5_1}
+							td #{val.below_10_1}
+							td #{val.below_15_1}
+							td #{val.below_20_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.below_a_2}
+							td #{val.below_5_2}
+							td #{val.below_10_2}
+							td #{val.below_15_2}
+							td #{val.below_20_2}
+							td #{val.total_2}
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Right Thigh
+						th below A.S.I.S
+						th below 5 cm
+						th below 10 cm
+						th below 15 cm
+						th below 20 cm
+						th total diference in session
+			h3 Arms
+			table
+				thead
+					tr
+						th(colspan="2") Right Arm
+						th olecroneon
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th above 20 cm
+						th total diference in session
+				tbody
+					each val, index in arm_right
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.olecroneon_1}
+							td #{val.above_5_1}
+							td #{val.above_10_1}
+							td #{val.above_15_1}
+							td #{val.above_20_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.olecroneon_2}
+							td #{val.above_5_2}
+							td #{val.above_10_2}
+							td #{val.above_15_2}
+							td #{val.above_20_2}
+							td #{val.total_2}
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Right Arm
+						th olecroneon
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th above 20 cm
+						th total diference in session
+			hr
+			table
+				thead
+					tr
+						th(colspan="2") Left Arm
+						th olecroneon
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th above 20 cm
+						th total diference in session
+				tbody
+					each val, index in arm_left
+						tr
+							td(rowspan="2") #{index + 1} st
+							td A
+							td #{val.olecroneon_1}
+							td #{val.above_5_1}
+							td #{val.above_10_1}
+							td #{val.above_15_1}
+							td #{val.above_20_1}
+							td #{val.total_1}
+						tr
+							td B
+							td #{val.olecroneon_2}
+							td #{val.above_5_2}
+							td #{val.above_10_2}
+							td #{val.above_15_2}
+							td #{val.above_20_2}
+							td #{val.total_2}
+					tr
+						td(rowspan="2") New Row
+						td A
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+					tr
+						td B
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+						td: input(type="text", name="", id="")
+				tfoot
+					tr
+						th(colspan="2") Left Arm
+						th olecroneon
+						th above 5 cm
+						th above 10 cm
+						th above 15 cm
+						th above 20 cm
+						th total diference in session
+		#credit
+			.money
+				.wcontainer
+					.width50.form-element
+						label(for="new-payment") Payment
+						input#new-payment(type="text", name="new-payment")
+					.width50.form-element
+						label(for="new-return") Return
+						input#new-return(type="text", name="new-return")
+				.wcontainer
+					.width100
+						h3 Sessions
+					.width50.form-element
+						select#sessions-list(name="sessions-list")
+							option(value="male") Male
+							option(value="female") Female
+					.width50.form-element
+						input#sessions-discount(type="text", name="sessions-discount", placeholder="discount")
+					.sessions-details.width100
+						button.width100.button.btn-primary add session
+						div.item
+							i.pull-left.icon-close
+							| session name (95)
+							p.pull-right
+								| price:
+								span.span-price 100
+								| / discount
+								span.span-discount 5
+						div.item
+							i.pull-left.icon-close
+							| session name (95)
+							p.pull-right
+								| price:
+								span.span-price 100
+								| / discount
+								span.span-discount 5
+						div.item
+							i.pull-left.icon-close
+							| session name (95)
+							p.pull-right
+								| price:
+								span.span-price 100
+								| / discount
+								span.span-discount 5
+					.width100
+						.details-total.clearfix
+							b
+								| Total: 
+								span 5
+								|  EGP
+
+				.wcontainer
+					.width100
+						h3 Extra Sessions
+					.width50.form-element
+						select#e-sessions-list(name="e-sessions-list")
+							option(value="male") Male
+							option(value="female") Female
+					.width50.form-element
+						input#e-sessions-discount(type="text", name="e-sessions-discount", placeholder="Price")
+					.e-sessions-details.width100
+						button.width100.button.btn-primary add session
+						div.item
+							i.pull-left.icon-close
+							| session name
+							p.pull-right
+								| price:
+								span.span-price 100
+						div.item
+							i.pull-left.icon-close
+							| session name
+							p.pull-right
+								| price:
+								span.span-price 100
+						div.item
+							i.pull-left.icon-close
+							| session name
+							p.pull-right
+								| price:
+								span.span-price 100
+					.width100
+						.details-total.clearfix
+							b
+								| Total: 
+								span 5
+								|  EGP
+				.wcontainer
+					.width100
+						h3 Items
+					.width50.form-element
+						select#items-list(name="items-list")
+							option(value="male") Male
+							option(value="female") Female
+					.width50
+						.width50.form-element
+							input#items-q(type="text", name="items-q", placeholder="Quantity")
+						.width50.form-element
+							input#items-price(type="text", name="items-price", placeholder="Price")
+					.items-details.width100
+						button.width100.button.btn-primary add item
+						div.item
+							i.pull-left.icon-close
+							| item name (95)
+							p.pull-right
+								| Q:
+								span.span-q 5
+								| / price
+								span.span-price 100
+						div.item
+							i.pull-left.icon-close
+							| item name (95)
+							p.pull-right
+								| Q:
+								span.span-q 5
+								| / price
+								span.span-price 100
+						div.item
+							i.pull-left.icon-close
+							| item name (95)
+							p.pull-right
+								| Q:
+								span.span-q 5
+								| / price
+								span.span-price 100
+					.width100
+						.details-total.clearfix
+							b
+								| Total: 
+								span 5
+								|  EGP
+			.total
+				h4
+					| Total
+					button.button.btn-big.btn-primary(type="button") print
+				.cr
+					| Cash Remaining:
+					span 0
+				.p
+					| Payment:
+					span 0
+				.r
+					| Return:
+					span 0
+				.t
+					| Payment Total:
+					span 0
+				.s
+					| Sessions:
+					span 0
+				.e
+					| Extra Sessions:
+					span 0
+				.i
+					| Items:
+					span 0
+				.c
+					| Cost Total:
+					span 0
+				.f
+					| Final Cash Remain:
+					span 0
+		#history
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		#dates
+			include ../calendar/calendar.jade
+		.form-action
+			a.button.btn-big.btn-primary(href="patients-add-post") Save
+			button.button.btn-big.btn-danger.pull-right(type="reset") reset

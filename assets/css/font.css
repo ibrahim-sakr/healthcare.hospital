@@ -1,0 +1,149 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?f5rf9f');
+	src:url('../fonts/icomoon/icomoon.eot?#iefixf5rf9f') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?f5rf9f') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?f5rf9f') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?f5rf9f#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minimize:before {
+	content: "\e60c";
+}
+
+.icon-fullscreen:before {
+	content: "\e60d";
+}
+
+.icon-app-help:before {
+	content: "\e604";
+}
+
+.icon-patients:before {
+	content: "\e60e";
+}
+
+.icon-accounts:before {
+	content: "\e606";
+}
+
+.icon-done:before {
+	content: "\e60f";
+}
+
+.icon-home:before {
+	content: "\e60a";
+}
+
+.icon-details:before {
+	content: "\e614";
+}
+
+.icon-admin:before {
+	content: "\e60b";
+}
+
+.icon-dates:before {
+	content: "\e615";
+}
+
+.icon-search:before {
+	content: "\e603";
+}
+
+.icon-app-settings:before {
+	content: "\e600";
+}
+
+.icon-user-logout:before {
+	content: "\e602";
+}
+
+.icon-last-page:before {
+	content: "\e618";
+}
+
+.icon-first-page:before {
+	content: "\e619";
+}
+
+.icon-sidebar:before {
+	content: "\e601";
+}
+
+.icon-edit:before {
+	content: "\e612";
+}
+
+.icon-folder-close:before {
+	content: "\e607";
+}
+
+.icon-folder-open:before {
+	content: "\e608";
+}
+
+.icon-prev-page:before {
+	content: "\e61a";
+}
+
+.icon-next-page:before {
+	content: "\e61b";
+}
+
+.icon-arrow-down:before {
+	content: "\e610";
+}
+
+.icon-arrow-top:before {
+	content: "\e611";
+}
+
+.icon-close:before {
+	content: "\e609";
+}
+
+.icon-maxmize:before {
+	content: "\e613";
+}
+
+.icon-reports:before {
+	content: "\f080";
+}
+
+.icon-diagnosis:before {
+	content: "\f0f0";
+}
+
+.icon-credit:before {
+	content: "\f155";
+}
+
+.icon-archive:before {
+	content: "\e617";
+}
+
+.icon-history:before {
+	content: "\e616";
+}
+
+.icon-user-profile:before {
+	content: "\e605";
+}
+

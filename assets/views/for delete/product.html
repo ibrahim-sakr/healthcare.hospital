@@ -1,0 +1,20 @@
+<p><a class="navlink" href="products">back to Products</a></p>
+
+<h2></h2>
+
+<p class="desc"></p>
+<p class="price"></p>
+
+
+<script>
+	
+
+var sqlQuery = "SELECT name, description, price FROM products WHERE id = "+ db.escape(product_id);
+db.query(sqlQuery, function(err, rows, fields) {
+	if (err) throw err;
+	jQuery('h2').html(rows[0].name);
+	jQuery('.desc').html(rows[0].description);
+	jQuery('.price').html(rows[0].price);
+});
+
+</script>

@@ -1,0 +1,37 @@
+#diets-profile
+	h1: span #{data.name}
+	.container
+		form
+			.form-element
+				label Category
+				.form-input
+					input(type="text", value="#{data.name}")
+			.form-element
+				label(for="name") Name
+				.form-input
+					input#name(type="text", name="name", value="#{inputs ? inputs.name : data.name}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="price") Name
+				.form-input
+					input#price(type="text", name="price", value="#{inputs ? inputs.price : data.price}", class="#{errors && 'price' in errors ? 'err' : ''}")
+					if errors
+						if 'price' in errors
+							.valid_err: ul
+								for err in errors.price
+									li #{err}
+			.form-element
+				label Added ON
+				.form-input
+					input#from(type="text", disabled="disabled", value="#{data.created_at}")
+			.form-element
+				label Last Updated
+				.form-input
+					input#to(type="text", disabled="disabled", value="#{data.updated_at}")
+			.form-action
+				a.button.btn-big.btn-primary(href="sessions-update", data-id="#{data.id}") Update
+				a.button.btn-big.btn-danger.pull-right(href="sessions-remove", data-id="#{data.id}") delete

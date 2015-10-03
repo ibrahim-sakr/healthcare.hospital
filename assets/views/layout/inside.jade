@@ -1,0 +1,55 @@
+header#header.clearfix
+	img.logo(src="../../images/logo-main.png", alt="main logo")
+	div.origins
+		ul
+			li: a.active(href="app-home")
+				i.icon-home
+				span.popover Home
+			li: a(href="app-patients")
+				i.icon-patients
+				span.popover Patients
+			li: a(href="app-admin")
+				i.icon-admin
+				span.popover Adminstration
+			li: a(href="app-accounts")
+				i.icon-accounts
+				span.popover Accounts
+			li: a(href="app-reports")
+				i.icon-reports
+				span.popover Reports
+	div#search
+		div.search-input
+			input#searchQuery(type="text", placeholder="search in app")
+		button.search-submit(type="button"): i.icon-search
+		select#searchSection.search-select
+			option(value="patients") patients
+			option(value="beds") beds
+			option(value="groups") groups
+			option(value="diets") diets
+			option(value="booking") booking
+			option(value="employees") employees
+			option(value="machines") machines
+			option(value="categories") categories
+			option(value="sessions") sessions
+	ul.user-meta
+		li#user
+			input#user-meta-menu.menu-active(type="checkbox")
+			label(for="user-meta-menu")
+				img(src="../../images/user-avatar.jpg", alt="user avatar")
+				span User Name
+			ul.user-meta-menu
+				li
+				li
+					a(href="app-user-profile", data-id="#{currentUserIid}")
+						i.icon-user-profile
+						| My Profile
+				li
+					a(href="help-page")
+						i.icon-app-help
+						| Help
+				li
+					a(href="options-page")
+						i.icon-app-settings 
+						| Settings
+div#inside-page
+	//- block page

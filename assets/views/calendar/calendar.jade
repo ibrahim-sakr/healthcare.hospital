@@ -1,0 +1,38 @@
+.cal-header
+.calendar-view
+	.box
+		h4#calTitle
+		div
+			button.button.btn-big.btn-primary(type="button", title="Go to Previous Month", onclick="Calendar.prevCal(document.getElementById('currMonth').value, document.getElementById('currYear').value);") Prev
+			button.button.btn-big.btn-primary(type="button", title="Go to Next Month", onclick="Calendar.nextCal(document.getElementById('currMonth').value, document.getElementById('currYear').value);") Next
+			button.button.btn-big.btn-primary(type="button", title="Current Month", onclick="Calendar.currCal();") Curr
+		form(name="selectDate")
+			select(name="selectMonth", onchange="Calendar.drawCal(document.selectDate.selectMonth.selectedIndex, document.selectDate.selectYear.options[form.selectYear.selectedIndex].value);")
+				option January
+				option February
+				option March
+				option April
+				option May
+				option June
+				option July
+				option August
+				option September
+				option October
+				option November
+				option December
+			select(name="selectYear", onchange="Calendar.drawCal(document.selectDate.selectMonth.selectedIndex, document.selectDate.selectYear.options[form.selectYear.selectedIndex].value);")
+				option(value="2015") 2015
+	.box-content
+		ul.clearfix
+			li Sun
+			li Mon
+			li Tue
+			li Wed
+			li Thu
+			li Fri
+			li Sat
+		ul#calDates.dates.clearfix
+		input#currYear(type="hidden")
+		input#currMonth(type="hidden")
+		input#currDay(type="hidden")
+

@@ -1,0 +1,35 @@
+#groups-add
+	h1: span Add New Group
+	.container
+		form
+			.form-element
+				label(for="groupName") Group Name
+				.form-input
+					input#groupName(type="text", name="groupName", value="#{inputs ? inputs.name : ''}", class="#{errors && 'name' in errors ? 'err' : ''}")
+					if errors
+						if 'name' in errors
+							.valid_err: ul
+								for err in errors.name
+									li #{err}
+			.form-element
+				label(for="groupDiscount") Discount (%)
+				.form-input
+					input#groupDiscount(type="text", name="groupDiscount", value="#{inputs ? inputs.discount : ''}", class="#{errors && 'discount' in errors ? 'err' : ''}")
+					if errors
+						if 'discount' in errors
+							.valid_err: ul
+								for err in errors.discount
+									li #{err}
+			.form-element
+				label(for="groupFixed") Fixed Price
+				.form-input
+					input#groupFixed(type="text", name="groupFixed", value="#{inputs ? inputs.fixed_price : ''}", class="#{errors && 'fixed_price' in errors ? 'err' : ''}")
+					small: <b>Important :</b> Leave this field empty unless you want Fixed price.
+					if errors
+						if 'fixed_price' in errors
+							.valid_err: ul
+								for err in errors.fixed_price
+									li #{err}
+			.form-action
+				a.button.btn-big.btn-primary(href="groups-add-post") Add Group
+				button.button.btn-big.btn-danger.pull-right(type="reset") reset
